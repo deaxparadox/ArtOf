@@ -16,10 +16,19 @@
 			"path": "ArtOfPostgreSQL"
 		},
 		{
-			"path": "../GitClone/developer-roadmap/src/data/roadmaps"
+			"path": "ArtOfDocker"
 		},
 		{
-			"path": "ArtOfDocker"
+			"path": "ArtOfAI"
+		},
+		{
+			"path": "ArtOfDeno"
+		},
+		{
+			"path": "ArtOfNodeJS"
+		},
+		{
+			"path": "ArtOfJavaScript"
 		}
 	],
 	"settings": {
