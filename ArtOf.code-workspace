@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "ArtOfLinux"
+		},
+		{
+			"path": "ArtOfPython"
+		},
+		{
+			"path": "ArtOfTypeScript"
+		},
+		{
+			"path": "ArtOfRust"
+		},
+		{
+			"path": "ArtOfPostgreSQL"
+		},
+		{
+			"path": "../GitClone/developer-roadmap/src/data/roadmaps"
+		},
+		{
+			"path": "ArtOfDocker"
+		}
+	],
+	"settings": {
+		"deno.enable": true,
+		"deno.unstable": true
+	}
+}

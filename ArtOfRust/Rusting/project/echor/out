@@ -1,0 +1,359 @@
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 5 tests
+test dies_no_args ... ok
+test hello2 ... FAILED
+test hello1_no_newline ... FAILED
+test hello1 ... FAILED
+test hello2_no_newline ... FAILED
+
+failures:
+
+---- hello2 stdout ----
+Hello there
+
+thread 'hello2' panicked at 'Unexpected stdout, failed diff original var
+├── original: Hello there
+├── diff: 
+│   --- 	orig
+│   +++ 	var
+│   @@ -0,0 +1,19 @@
+│   +ArgMatches {
+│   +    args: {
+│   +        "text": MatchedArg {
+│   +            occurs: 2,
+│   +            indices: [
+│   +                1,
+│   +                2,
+│   +            ],
+│   +            vals: [
+│   +                "Hello",
+│   +                "there",
+│   +            ],
+│   +        },
+│   +    },
+│   +    subcommand: None,
+│   +    usage: Some(
+│   +        "USAGE:\n    echor [FLAGS] <TEXT>...",
+│   +    ),
+│   +}
+└── var as str: ArgMatches {
+        args: {
+            "text": MatchedArg {
+                occurs: 2,
+                indices: [
+                    1,
+                    2,
+                ],
+                vals: [
+                    "Hello",
+                    "there",
+                ],
+            },
+        },
+        subcommand: None,
+        usage: Some(
+            "USAGE:\n    echor [FLAGS] <TEXT>...",
+        ),
+    }
+    Hello there
+
+command=`"/home/creator/Documents/Paradox/Goals/g31012023/Rust/Project/echor/target/debug/echor" "Hello" "there"`
+code=0
+stdout=```
+ArgMatches {
+    args: {
+        \"text\": MatchedArg {
+            occurs: 2,
+            indices: [
+                1,
+                2,
+            ],
+            vals: [
+                \"Hello\",
+                \"there\",
+            ],
+        },
+    },
+    subcommand: None,
+    usage: Some(
+        \"USAGE:\\n    echor [FLAGS] <TEXT>...\",
+    ),
+}
+Hello there
+```
+
+stderr=""
+', /rustc/69f9c33d71c871fc16ac445211281c6e7a340943/library/core/src/ops/function.rs:251:5
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- hello1_no_newline stdout ----
+Hello there
+thread 'hello1_no_newline' panicked at 'Unexpected stdout, failed diff original var
+├── original: Hello there
+├── diff: 
+│   --- 	orig
+│   +++ 	var
+│   @@ -0,0 +1,24 @@
+│   +ArgMatches {
+│   +    args: {
+│   +        "text": MatchedArg {
+│   +            occurs: 1,
+│   +            indices: [
+│   +                1,
+│   +            ],
+│   +            vals: [
+│   +                "Hello there",
+│   +            ],
+│   +        },
+│   +        "omit_newline": MatchedArg {
+│   +            occurs: 1,
+│   +            indices: [
+│   +                2,
+│   +            ],
+│   +            vals: [],
+│   +        },
+│   +    },
+│   +    subcommand: None,
+│   +    usage: Some(
+│   +        "USAGE:\n    echor [FLAGS] <TEXT>...",
+│   +    ),
+│   +}
+└── var as str: ArgMatches {
+        args: {
+            "text": MatchedArg {
+                occurs: 1,
+                indices: [
+                    1,
+                ],
+                vals: [
+                    "Hello there",
+                ],
+            },
+            "omit_newline": MatchedArg {
+                occurs: 1,
+                indices: [
+                    2,
+                ],
+                vals: [],
+            },
+        },
+        subcommand: None,
+        usage: Some(
+            "USAGE:\n    echor [FLAGS] <TEXT>...",
+        ),
+    }
+    Hello there
+
+command=`"/home/creator/Documents/Paradox/Goals/g31012023/Rust/Project/echor/target/debug/echor" "Hello there" "-n"`
+code=0
+stdout=```
+ArgMatches {
+    args: {
+        \"text\": MatchedArg {
+            occurs: 1,
+            indices: [
+                1,
+            ],
+            vals: [
+                \"Hello there\",
+            ],
+        },
+        \"omit_newline\": MatchedArg {
+            occurs: 1,
+            indices: [
+                2,
+            ],
+            vals: [],
+        },
+    },
+    subcommand: None,
+    usage: Some(
+        \"USAGE:\\n    echor [FLAGS] <TEXT>...\",
+    ),
+}
+Hello there```
+
+stderr=""
+', /rustc/69f9c33d71c871fc16ac445211281c6e7a340943/library/core/src/ops/function.rs:251:5
+
+---- hello1 stdout ----
+Hello there
+
+thread 'hello1' panicked at 'Unexpected stdout, failed diff original var
+├── original: Hello there
+├── diff: 
+│   --- 	orig
+│   +++ 	var
+│   @@ -0,0 +1,17 @@
+│   +ArgMatches {
+│   +    args: {
+│   +        "text": MatchedArg {
+│   +            occurs: 1,
+│   +            indices: [
+│   +                1,
+│   +            ],
+│   +            vals: [
+│   +                "Hello there",
+│   +            ],
+│   +        },
+│   +    },
+│   +    subcommand: None,
+│   +    usage: Some(
+│   +        "USAGE:\n    echor [FLAGS] <TEXT>...",
+│   +    ),
+│   +}
+└── var as str: ArgMatches {
+        args: {
+            "text": MatchedArg {
+                occurs: 1,
+                indices: [
+                    1,
+                ],
+                vals: [
+                    "Hello there",
+                ],
+            },
+        },
+        subcommand: None,
+        usage: Some(
+            "USAGE:\n    echor [FLAGS] <TEXT>...",
+        ),
+    }
+    Hello there
+
+command=`"/home/creator/Documents/Paradox/Goals/g31012023/Rust/Project/echor/target/debug/echor" "Hello there"`
+code=0
+stdout=```
+ArgMatches {
+    args: {
+        \"text\": MatchedArg {
+            occurs: 1,
+            indices: [
+                1,
+            ],
+            vals: [
+                \"Hello there\",
+            ],
+        },
+    },
+    subcommand: None,
+    usage: Some(
+        \"USAGE:\\n    echor [FLAGS] <TEXT>...\",
+    ),
+}
+Hello there
+```
+
+stderr=""
+', /rustc/69f9c33d71c871fc16ac445211281c6e7a340943/library/core/src/ops/function.rs:251:5
+
+---- hello2_no_newline stdout ----
+Hello there
+thread 'hello2_no_newline' panicked at 'Unexpected stdout, failed diff original var
+├── original: Hello there
+├── diff: 
+│   --- 	orig
+│   +++ 	var
+│   @@ -0,0 +1,26 @@
+│   +ArgMatches {
+│   +    args: {
+│   +        "omit_newline": MatchedArg {
+│   +            occurs: 1,
+│   +            indices: [
+│   +                1,
+│   +            ],
+│   +            vals: [],
+│   +        },
+│   +        "text": MatchedArg {
+│   +            occurs: 2,
+│   +            indices: [
+│   +                2,
+│   +                3,
+│   +            ],
+│   +            vals: [
+│   +                "Hello",
+│   +                "there",
+│   +            ],
+│   +        },
+│   +    },
+│   +    subcommand: None,
+│   +    usage: Some(
+│   +        "USAGE:\n    echor [FLAGS] <TEXT>...",
+│   +    ),
+│   +}
+└── var as str: ArgMatches {
+        args: {
+            "omit_newline": MatchedArg {
+                occurs: 1,
+                indices: [
+                    1,
+                ],
+                vals: [],
+            },
+            "text": MatchedArg {
+                occurs: 2,
+                indices: [
+                    2,
+                    3,
+                ],
+                vals: [
+                    "Hello",
+                    "there",
+                ],
+            },
+        },
+        subcommand: None,
+        usage: Some(
+            "USAGE:\n    echor [FLAGS] <TEXT>...",
+        ),
+    }
+    Hello there
+
+command=`"/home/creator/Documents/Paradox/Goals/g31012023/Rust/Project/echor/target/debug/echor" "-n" "Hello" "there"`
+code=0
+stdout=```
+ArgMatches {
+    args: {
+        \"omit_newline\": MatchedArg {
+            occurs: 1,
+            indices: [
+                1,
+            ],
+            vals: [],
+        },
+        \"text\": MatchedArg {
+            occurs: 2,
+            indices: [
+                2,
+                3,
+            ],
+            vals: [
+                \"Hello\",
+                \"there\",
+            ],
+        },
+    },
+    subcommand: None,
+    usage: Some(
+        \"USAGE:\\n    echor [FLAGS] <TEXT>...\",
+    ),
+}
+Hello there```
+
+stderr=""
+', /rustc/69f9c33d71c871fc16ac445211281c6e7a340943/library/core/src/ops/function.rs:251:5
+
+
+failures:
+    hello1
+    hello1_no_newline
+    hello2
+    hello2_no_newline
+
+test result: FAILED. 1 passed; 4 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
