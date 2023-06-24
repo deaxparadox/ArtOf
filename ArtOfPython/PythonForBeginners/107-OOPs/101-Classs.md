@@ -20,7 +20,7 @@ class Home:
     pass
 ```
 
-### Instances
+## Instances
 
 Instances are like a person whose enter the **Home** and access home attributes (here attribute is used to both variables and functions).
 
@@ -33,79 +33,82 @@ h = Home()
 So, we have create instance `h` of `Home`.
 
 
-### Define atttribute and function in class
+## Define atttribute and function in class
 
 We are going to define class **Home** with attribute name, age, hall(), kitchen(). 
 
 
 ```py
 class Home:
-    def __init__(self, name, age) -> None:
+    def __init__(self, name):
         self.name = name 
-        self.age = age 
+    def welcome_message(self):
+        return "Welcome to {}".format(self.name)
     
-    def hall(self):
-        return "This is hall."
-    
-    def kitchen(self):
-        return "This is kitchen."
 ```
 
-Creating instance and accessing attribute:
+## Creating instance and accessing attribute:
 
 ```py
-h = Home("Person1", 20)
-
-
+class Home:
+    def __init__(self, name):
+        self.name = name 
+    def welcome_message(self):
+        return "Welcome to {}".format(self.name)
+    
+h = Home("Linux")
 print(h.name)
-print(h.age)
-print(h.hall())
-print(h.kitchen())
+print(h.welcome_message())
 ```
 
-```output
-Person1
-20
-This is hall.
-This is kitchen.
+```bash
+Linux
+Welcome to Linux
 ```
 
-The first method `__init__()` is called constructor function, it is the first object executed by class **Home** when we created an instance. So each instance is like a person with different name and age, and then access house attribute *hall()* and *kitchen()*. Constructor function takes argument *name*, and *age*, which are required for entering, then argument are pass as variable to constructor, which can only be used after creating an instance, and they are called *instance variables*. You can also created contructor function with out any arguments.
+- The first method `__init__()` is called `constructor function`, it is the first object executed by class **Home** when we created an instance. Constructor function takes argument *name*, which are required for entering, then argument are pass as variable to constructor, which can only be used after creating an instance, and they are called *instance variables*. You can also created contructor function with out any arguments.
 
-In this is we are creating again creating class **Home** with out instance argument.
+- In this is we are creating again creating class **Home** with out instance argument.
+
 
 ```py
 class Home:
-
-    # constructor function with no argument, 
-    # no instance variable
-    def __init__(self) -> None:
-        pass 
-
-    def hall(self):
-        return "This is hall."
+    def __init__(self):
+        pass
+    def welcome_message(self):
+        return "Welcome to {}".format(self.name)
     
-    def kitchen(self):
-        return "This is kitchen."
+h = Home()
+print(h.welcome_message())
 ```
 
-Again we are creating class **Home**, without instance argument, but with *instance varaible*, which we can access after creating instance of class
+```bash
+Welcome to Linux
+```
+
+## *instance variable*
+
+- Again we are creating class **Home**, without instance argument, but with *instance varaible*, which we can access after creating instance of class
 
 ```py
 class Home:
-    def __init__(self) -> None:
-
-        # instance variable
-        self.house_name = "Super house 1" 
-
-    def hall(self):
-        return "This is hall."
+    def __init__(self):
+        self.name = "Super house 1"
+    def welcome_message(self):
+        return "Welcome to {}".format(self.name)
     
-    def kitchen(self):
-        return "This is kitchen."
+h = Home()
+print(h.name)
+print(h.welcome_message())
 ```
 
-Similar to *instance varible* we can also create *class variable* which are define on class level:
+```bash
+Super house 1
+Welcome to Super house 1
+```
+
+## *class varaible*
+- Similar to *instance varible* we can also create *class variable* which are define on class level:
 
 ```py
 class Home:
@@ -123,13 +126,15 @@ class Home:
         return "This is kitchen."
 ```
 
-We can access *class variable* like this:
+- We can access *class variable* like this:
 
 ```py
 print(Home.house_name)
 ```
 
-```output
+```bash
+//output 
+
 Super house 1
 ```
 
@@ -141,6 +146,8 @@ print(h.name)
 ```
 
 ```output
+// output 
+
 Person1
 ```
 
@@ -156,6 +163,6 @@ This is hall.
 This is kitchen.
 ```
 
-Methods the same as regular functions, they are argument return object. Now go on testing with them.
+Methods the same as regular functions, they accept argument and return object. Now go on testing with them.
 
 [Inheritence >>>](102-Inheritence.md)
