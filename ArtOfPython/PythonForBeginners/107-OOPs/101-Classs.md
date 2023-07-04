@@ -4,12 +4,11 @@
 <!-- instance variable -->
 <!-- class varaible -->
 
-
-#  Classes
+# Classes
 
 `Classes` are used to create  user-defined data structures. Classes define functions called **methods**, which identity the behaviors and action that an object created from the class can perform with its data.
 
-### How to Define a class
+## How to Define a class
 
 Classes are define using `class` keyword, followed by atributes and methods of class.
 
@@ -32,11 +31,9 @@ h = Home()
 
 So, we have create instance `h` of `Home`.
 
-
 ## Define atttribute and function in class
 
 We are going to define class **Home** with attribute name, age, hall(), kitchen(). 
-
 
 ```py
 class Home:
@@ -108,6 +105,7 @@ Welcome to Super house 1
 ```
 
 ## *class varaible*
+
 - Similar to *instance varible* we can also create *class variable* which are define on class level:
 
 ```py
