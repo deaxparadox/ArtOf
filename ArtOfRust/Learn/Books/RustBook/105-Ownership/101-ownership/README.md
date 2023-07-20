@@ -3,6 +3,7 @@
 *Ownership* is a set of rules that govern how a Rust program manages memory.
 
 Rust manages memory through a system of ownership with a set of rules that the compiler checks.
+
 - It any of the rules are voilated, the programm won't compile.
 - None of the features of ownership will slow down your program while it's running.
 
