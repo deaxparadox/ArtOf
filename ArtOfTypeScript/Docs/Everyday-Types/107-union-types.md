@@ -55,3 +55,29 @@ function printId(id: number | string) {
   }
 }
 ```
+
+Another example is to use a function like `Array.isArray`:
+
+```ts
+function welcomePeople(x: string[] | string) {
+  if (Array.isArray(x)) {
+    // Here: 'x' is 'string[]'
+    console.log("Hello, " + x.join(" and "));
+  } else {
+    // Here: 'x' is 'string'
+    console.log("Welcome lone traveler " + x);
+  }
+}
+```
+
+- Notice that in the `else` branch, we don't need to do anything special - if `x` wasn't a `string[]`, then it must have been a `string`.
+
+- Sometimes you’ll have a union where all the members have something in common. For example, both arrays and strings have a `slice` method. If every member in a union has a property in common, you can use that property without narrowing:
+
+```ts
+// Return type is inferred as number[] | string
+function getFirstThree(x: number[] | string) {
+  return x.slice(0, 3);
+}
+```
+
