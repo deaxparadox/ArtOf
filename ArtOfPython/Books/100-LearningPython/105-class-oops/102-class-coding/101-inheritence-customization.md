@@ -27,6 +27,10 @@ class SecondClass(FirstClass):          # Inherit setData
 
 - In this case, since  the `display` name in `SecondClass` will be found before the one  in `FirstClass`, we say that `SecondClass` *overrides*  `FirsClass`'s `display`.
 
+- The new effect here is that `SecondClass` specializes `FirstClass` by changing the behavior of the `display` method. 
+- On the other hand, `SecondClass` still in herites the `setdata` method in `FirstClass` verbatim. 
+- let's make an instance to demonstrate
+
 ```py
 >>> z = SecondClass()
 >>> z.setData(42)               # Finds setdata in FirstClass
