@@ -22,3 +22,21 @@ classes have three critical distinction that make them more usefull when it come
 3. *Operator overloading*: By providing special protocol methods, classes can define objects that respond to the sorts of operations we saw at work on built-in types. For instance, object made with classes can be sliced, concatenated, indexed, and so on. Python provides hooks that classes can use to intercept and implement any built-in type operation.
 
 The mechanism of OOP in Python is largely just *two bits of magic*: a special first argument in functions (to receive the  subject of a call) and inheritence attribute search (to support programming by customization).
+
+Python OOP concept boils down to this expression:
+
+```
+    object.attribute
+```
+
+Python object model, classes and the instances you generate from them are two distinct object type:
+
+#### Classes
+
+- Serve as instance factories. 
+- Their attributes provide behavior--data and function--that is inherited by all the instances generated from them
+
+#### Instances
+
+- Represent the concrete items in a program's domain.
+- Their attributes record data that varies per specific object

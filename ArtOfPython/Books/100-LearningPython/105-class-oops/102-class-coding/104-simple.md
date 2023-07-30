@@ -1,0 +1,1 @@
+# The World's Simplest Python Class

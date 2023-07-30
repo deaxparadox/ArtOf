@@ -1,5 +1,7 @@
 mod slice;
 mod structure;
+mod enump;
+
 
 use slice as sl;
 use structure as st;
