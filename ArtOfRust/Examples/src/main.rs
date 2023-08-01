@@ -5,6 +5,7 @@ mod enump;
 
 use slice as sl;
 use structure as st;
+use enump as e;
 
 fn main() {
     // println!("Hello, world!");
@@ -13,5 +14,7 @@ fn main() {
 
     // st::tuple::tuple_information::main();
     // st::rectangle::rectangle_with_struct::main();
-    st::method::normal::main();
+    // st::method::normal::main();
+
+    e::enum_variable::main();
 }
