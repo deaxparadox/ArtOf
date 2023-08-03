@@ -16,5 +16,6 @@ fn main() {
     // st::rectangle::rectangle_with_struct::main();
     // st::method::normal::main();
 
-    e::enum_variable::main();
+    // e::enum_variable::main();
+    e::main();
 }

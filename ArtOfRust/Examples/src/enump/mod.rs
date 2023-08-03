@@ -1,3 +1,9 @@
+pub mod matching;
+
+pub fn main() {
+    matching::simple::main();
+}
+
 pub mod define {
     enum IpAddrKind {
         V4,
