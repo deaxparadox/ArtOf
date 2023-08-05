@@ -9,41 +9,6 @@ Python String are regular text strings, which can be expressed in several ways. 
 >>> 
 ```
 
-## `\` is used to escape characters
-
-`\` for escaping single quotes
-
-```python   
-# escaping quote
->>> 'Isn\'t they said'
-"Isn't they said"
-```
-
-```python
-# not escaping quotes
->>> 'Isn't they said'
-  File "<stdin>", line 1
-    'Isn't they said'
-         ^
-SyntaxError: invalid syntax
->>> 
-```
-
-- We are getting error on not escaping quotes because python thing String is ending after character *n*. 
-
-### `\n` means newline
-
-- `\n` add a newline to the string, so when we use *print()* function, newline get formatted in the terminal.
-
-```python
->>> s = 'First line.\nSecone line'
->>> s
-'First line.\nSecone line'
->>> print(s)
-First line.
-Secone line
->>> 
-```
 
 ### r"" raw string
 
