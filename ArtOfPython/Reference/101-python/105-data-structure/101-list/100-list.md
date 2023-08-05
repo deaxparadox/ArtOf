@@ -4,6 +4,7 @@
 <!-- length of -->
 <!-- iteration: using for loop -->
 <!-- concatenation -->
+<!-- repetition -->
 <!-- indexing -->
 <!-- change value in list -->
 <!-- deleting value in list -->
@@ -126,7 +127,7 @@ for i in a:
 
 ## Concatenation
 
-Just like string we can concatenation, or simply add two list:
+Just like string we can concatenatie, or simply add two list:
 
 
 ```py
@@ -143,6 +144,3 @@ print(c)
 ```output
 [0, 1, 2, 3, 4, 5]
 ```
-
-
-

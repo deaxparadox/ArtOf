@@ -109,6 +109,3 @@ Out of range slice indexes are handled gracefully when used for slicing:
 'lo world'
 >>> 
 ```
-
-
-```

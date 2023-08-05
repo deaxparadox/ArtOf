@@ -4,7 +4,7 @@ By default, arguments may be passed to a Python function either by a position or
 
 ### Syntax 
 
-```
+```py
 def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):
       -----------    ----------     ----------
         |             |                  |

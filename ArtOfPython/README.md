@@ -7,3 +7,4 @@ Python is the general purpose scripting language, you could write a Unix shell s
 - Python is an interpreted language, which can save you considerable time during program development because no compilation and linking is necessary.
 
 - The interpreter can be used interactively, which makes it easy to experiment with features of the languages, to write throw-away programs, or to test functions during bottom-up program development.
+
