@@ -29,7 +29,7 @@ def multiple_patterns():
 
 def specific_values():
     match command.split():
-        case ['split']:
+        case ['quit']:
             print("Goodbye!")
         case ['look']:
             print("Looking at current room.")
@@ -38,4 +38,36 @@ def specific_values():
         case ['get', direction]:
             print("Go in that direction")
 
-specific_values()
+def multiple_values(): 
+    match command.split():
+        case ["drop", *objects]:
+            print(objects)
+        case default:
+            print("Universal case")
+
+
+def example_2():
+    subject: str = 'go'
+    direction: list[str] = ['north', 'south', 'east', 'west']
+
+    
+    match command.split():
+        case ['go', direction as i] :
+            print("we can go in {}".format(i))
+        case ['get', ('down'| 'up')]:
+            print("Action specified")
+        case ['go', *direction]:
+            print("We can go in any direction.")
+        case _:
+            print("Unable to procceed.")
+
+def example_3(): 
+    match command.split():
+        case ['north'] | ['go', 'north']:
+            print("North direction")
+        case ["get", obj] | ["pick", "up", obj] | ["pick", obj, "up"]:
+            print("Action {}".format(obj))
+        case _:
+            print("Unable to proceed")
+
+example_3()
