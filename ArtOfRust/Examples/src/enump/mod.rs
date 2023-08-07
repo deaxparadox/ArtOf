@@ -1,7 +1,10 @@
 pub mod matching;
+pub mod iflet;
 
 pub fn main() {
-    matching::simple::main();
+    // matching::exhaustive::main();
+    iflet::example_1::main();
+    iflet::example_2::main();
 }
 
 pub mod define {
