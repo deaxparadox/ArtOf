@@ -1,6 +1,7 @@
 mod slice;
 mod structure;
 mod enump;
+mod collections;
 
 
 use slice as sl;
@@ -17,5 +18,6 @@ fn main() {
     // st::method::normal::main();
 
     // e::enum_variable::main();
-    e::main();
+    // e::main();
+    collections::main();
 }
