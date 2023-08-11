@@ -86,7 +86,7 @@ print(combine_argument(b=1,a=2))
 
 print("Subraction")
 print(combine_argument(1,2, operator="-"))
-# print(combine_argument(operator="-", 1,2))      # error non-default cannot be used after defautl
+# print(combine_argument(operator="-", 1,2))      # error positional argument must be used before default argument
 print(combine_argument(a=1,b=2))
 print(combine_argument(b=1,a=2))
 ```

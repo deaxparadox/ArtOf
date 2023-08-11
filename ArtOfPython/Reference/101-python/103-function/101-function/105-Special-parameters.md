@@ -87,6 +87,8 @@ kwd_only_arg(arg=1)
 kwd_only_arg(1)         # you will get TypeError
 ```
 
+- if you try to use it as keyword argument you will `TypeError`.
+
 
 ## Combined
 
@@ -100,4 +102,31 @@ combined_example(1, standard=2, kwd_only=3)
 
 # output
 1 2 3
+```
+
+
+Finally, consider this function definition which has a potential collision between the positional argument `name` and `**kwds` which has `name` as a key:
+
+```py
+def foo(name, **kwds):
+    return 'name' in kwds
+```
+
+- There is no possible call that will make it return `True` as the keyword `'name'` will always bind to the first parameter. For example:
+
+```py
+>>> foo(1, **{'name': 2})
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: foo() got multiple values for argument 'name'
+>>> 
+```
+
+- But using `/` (positional only arguments), it is possible since it allows name as a positional argument and `'name'` as a key in the keyword arguments:
+
+```py
+def foo(name, /, **kwds):
+    return 'name' in kwds
+>>> foo(1, **{'name': 2})
+True
 ```

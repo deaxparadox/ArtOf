@@ -17,16 +17,20 @@ The `dict()` constructor builds dictionaries directly from sequences of key-valu
 {'sape': 4139, 'guido': 4127, 'jack': 4098}
 ```
 
+We can also supply simple keyword argument to `dict()` constructor function to generate a dictionary:
+
+```py
+>>> 
+>>> dict(a=1, b=2)
+{'a': 1, 'b': 2}
+>>> 
+>>> dict(sape=4139, guido=4127, jack=4098)
+{'sape': 4139, 'guido': 4127, 'jack': 4098}
+```
+
 ## `dict` comprehensions
 
 ```python
 >>> {x: x**2 for x in (2, 4, 6)}
 {2: 4, 4: 16, 6: 36}
-```
-
-## `dict` specify pairs as keyword argument
-
-```python
->>> dict(sape=4139, guido=4127, jack=4098)
-{'sape': 4139, 'guido': 4127, 'jack': 4098}
 ```
