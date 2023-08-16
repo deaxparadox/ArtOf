@@ -12,3 +12,28 @@ x = 1
 
 - Global names must be declared only if they are assigned within a function.
 - Global names may be referenced within a function without being declared.
+
+`global` allows us to *change* names that live outside of a def at the top level of the module.
+
+
+Accessing a global variable:
+
+```py
+X = 88                  # Global X
+
+def func():
+    global X
+    X = 99              # Global X: outside def
+
+func()
+print(X)                # Prints 99
+```
+
+Setting a variable global:
+
+```py
+y, x = 1, 2             # Global variable in module
+def all_global():
+    global x            # Declare globals assigned
+    x = y + x           # No need to declare y, x: LEGB
+```
