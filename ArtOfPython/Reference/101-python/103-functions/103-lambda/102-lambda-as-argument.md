@@ -8,3 +8,16 @@ Another use is to pass a small function as an argument:
 >>> pairs
 [(4, 'four'), (1, 'one'), (3, 'three'), (2, 'two')]
 ```
+
+
+## lamda as function call arguments
+
+```py
+
+>>> def f1(x = lambda: print("This is Mr. Lambda")): x()
+... 
+>>> 
+>>> f1()
+This is Mr. Lambda
+>>> 
+```
