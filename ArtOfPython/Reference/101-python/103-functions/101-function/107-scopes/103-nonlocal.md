@@ -70,3 +70,58 @@ eggs 43
 bacon 3                     # Each call has different state information
 >>> 
 ```
+
+### Boundary cases
+
+nonlocals come with some subtleties to be aware of:
+
+1. unlike the **global** statement, **nonlocal** names realy *must* have previously been assigned in an enclosing **def**'s when a **nonlocal** is evaluated, or else you'll get an error--you cannot create then dynamically by assigning then a new in the enclosing scope. If fact, they are checked at function definition time before  with an enclosing or nested function is called:
+
+
+```py
+>>> 
+>>> def tester(start):
+...     def nested(label):
+...             nonlocal state              # Nonlocals must already exist in enclosing def!
+...             state = 0
+...             print(label, state)
+...     return nested
+... 
+  File "<stdin>", line 3
+SyntaxError: no binding for nonlocal 'state' found
+>>> 
+```
+
+```py
+>>> 
+>>> def tester(start):
+...     def nested(label):
+...             global state            # Global don't have to exist yet when declared
+...             state = 0               # This creates the name in the module now
+...             print(label, state)
+...     return nested
+... 
+>>> F = tester(0)
+>>> F('abc')
+abc 0
+>>> state
+0
+>>> 
+```
+
+
+2. **nonlocal** restricts the scope lookup to just enclosing defs; nonlocals are not looked up in the enclosign module's global scope or the built-in scope outside all **def**s, even if they are already here:
+
+```py
+>>> spam = 99
+>>> def tester():
+...     def nested():
+...             nonlocal spam               # Must be in a def, not the module!
+...             print("Current=", spam)
+...             spam += 1
+...     return nested
+... 
+  File "<stdin>", line 3
+SyntaxError: no binding for nonlocal 'spam' found
+>>> 
+```
