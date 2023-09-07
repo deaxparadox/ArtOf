@@ -88,3 +88,62 @@ This query assigned the `surname` as the alias of the `last_name` column:
 ``` 
 
 Or you can make it shorter by removing the `AS` keyword follows.
+
+### 2) Assigning a column alias to an expression example
+
+The following query returns the full names of all customers. It constructs the full name by concatenating the first name, space, and the last name:
+
+```sql
+SELECT 
+   first_name || ' ' || last_name 
+FROM 
+   customer;
+```
+
+Note that in PostgreSQL, you use the `||` as the concatenating operator that concatenates one or more strings into a single string.
+
+```sql
+       full_name       
+-----------------------
+ Jared Ely
+ Mary Smith
+ Patricia Johnson
+ Linda Williams
+ Barbara Jones
+ Elizabeth Brown
+ Jennifer Davis
+ Maria Miller
+
+```
+
+### 3) Column aliases that contain spaces
+
+If a column alias contains one or more spaces, you need to surround it with double quotes like this:
+
+```sql
+column_name AS "column alias"
+```
+
+For example:
+
+```sql
+SELECT
+    first_name || ' ' || last_name "full name"
+FROM
+    customer;
+```
+
+
+```sql
+       full_name       
+-----------------------
+ Jared Ely
+ Mary Smith
+ Patricia Johnson
+ Linda Williams
+ Barbara Jones
+ Elizabeth Brown
+ Jennifer Davis
+ Maria Miller
+
+```
