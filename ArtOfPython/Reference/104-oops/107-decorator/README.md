@@ -31,4 +31,6 @@ Decorators achieve these effects by automatically rebinding function and class n
 Function decorators can be used to manage both function calls and function objects, and class decorators can be used to manage both class instances and classes themselves. By returning the decorated object itself instead of a wrapper, decorators become a simple post-creation step for functions and classes.
 
 
-## Using and Defining Decoratos
+## Using and Defining Decorators
+
+Functions decorators may be used to augment functions with code that adds call tracing or logging, performs argument validit testing during debuggin, automatically acquires and releases thread locks, times calls made to functions for optimization, and so on
