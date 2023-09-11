@@ -33,4 +33,8 @@ Function decorators can be used to manage both function calls and function objec
 
 ## Using and Defining Decorators
 
-Functions decorators may be used to augment functions with code that adds call tracing or logging, performs argument validit testing during debuggin, automatically acquires and releases thread locks, times calls made to functions for optimization, and so on
+Functions decorators may be used to augment functions with code that adds call tracing or logging, performs argument validity testing during debugging, automatically acquires and releases thread locks, times calls made to functions for optimization, and so on.
+
+Function decorators are designed to augment only a specific function or method call, not an entire *object interface*. 
+
+Class decorators fill the latter role better because they can intercept instance creation calls, they can be used to implement arbitrary object interface augmentation or management tasks.
