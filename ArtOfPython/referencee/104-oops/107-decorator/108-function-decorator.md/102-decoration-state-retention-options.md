@@ -149,3 +149,64 @@ call 2 to eggs
 
 
 ### Function attributes
+
+To avoid globals and classes by making use of *function atributes* for some changeable state instead.
+
+We can assign arbitrary attributes to functions to attach them, with **func.attr=value**. Because a factory function makes a new function on each call, its attributes become per-call state.
+
+Moreoever, you need to use this technique only for state variables that must *change*; enclosing scope references are still retained and work normally.
+
+In our example, we can simple use **wrapper.calls** for state. The following works the same as **nonlocal** version because the counter is again per-decoratored function:
+
+```py
+def tracer(func):                           # State via enclosing scope and func attr
+    def wrapper(*args, **kwargs):           # calls is per-function, not global
+        wrapper.calls += 1
+        print("call %s to %s" % (wrapper.calls, func.__name__))
+        return func(*args, **kwargs)
+    
+    wrapper.calls = 0
+    return wrapper
+
+
+@tracer
+def spam(a, b, c):                      # Same as: spam = tracer(spam)
+    print(a + b + c)
+
+@tracer
+def eggs(x, y):                         # Same as: eggs = tracer(eggs)
+    print(x ** y)
+
+spam(1, 2, 3)                           # Really calls wrapper, assigned to spam
+spam(a=4, b=5, c=6)                     # wrapper calls spam
+
+eggs(2, 16)                             # Really calls wrapper, assigned to eggs
+eggs(4, y=14)                           # Nonlocal calls is per-decoration here!
+
+```
+
+- this works only because the name **wrapper** is retained in the enclosing **tracer** function's scope. When we later increment **wrapper.calls**, we are not changing the name **wrapper** itself, so no nonlocal declaration is required.
+
+```bash
+$ python decorator5.py 
+call 1 to spam
+6
+call 2 to spam
+15
+call 1 to eggs
+65536
+call 2 to eggs
+268435456
+```
+
+----------
+
+
+Function attributes also have substantial advantages.
+
+- For one, they allow access to the saved state from *outside* the decorator's code; nonlocals can only be seen inside the nested function itself, but function attributes have wider visibility.
+- Another, they are far more *portable*, this scheme also works in 2.X, making it version-neutal.
+
+Function attributes are equivalent to enclosing scope nonlocals.
+
+Because decorators often imply multiple levels of callables, you can combine functions with enclosing scopes, classes with attributes, and function attributes to achieve a variety of coding structure. This sometimes may subtle then you expect--each decorated function should have its won state, and each decorated class may require state both itself and for each generated instance.

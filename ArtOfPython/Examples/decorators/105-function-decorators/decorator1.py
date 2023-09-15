@@ -6,7 +6,7 @@ class tracer:
     def __call__(self, *args):
         self.calls += 1
         print("call %s to %s" % (self.calls, self.func.__name__))
-        self.func(*args)
+        return self.func(*args)
 
 @tracer
 def spam(a, b, c):              # spam = tracer (spam)
