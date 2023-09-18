@@ -4,7 +4,7 @@ struct Rectangle {
 }
 
 pub mod normal {
-    use crate::st::method::Rectangle;
+    use crate::structure::method::Rectangle;
 
     impl Rectangle {
         fn area(&self) -> u32 {
@@ -41,7 +41,7 @@ pub mod normal {
 
 
 pub mod assciated_functions {
-    use crate::st::method::Rectangle;
+    use crate::structure::method::Rectangle;
 
     impl Rectangle {
         fn square(size: u32) -> Self {
