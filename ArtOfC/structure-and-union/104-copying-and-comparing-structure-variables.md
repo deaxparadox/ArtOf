@@ -1,1 +1,0 @@
-# Copying and Comparing Structure variables
