@@ -54,3 +54,21 @@ pub mod unwrap_1 {
         let greeting_File = File::open("hello.txt").unwrap();
     }
 }
+
+pub mod propagating_error_shortcut {
+    use std::{
+        fs::File, 
+        io::{
+            self, 
+            Read
+        }
+    };
+
+    pub fn main() -> Result<String, io::Error>{
+        let mut usernmae = String::new();
+
+        File::open("hello.txt")?.read_to_string(&mut username)?;
+    
+        Ok(usernmae)
+    }
+}

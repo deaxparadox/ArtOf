@@ -6,6 +6,9 @@ mod enump;
 mod error;
 mod slice;
 mod structure;
+mod rust;
+
+
 
 fn main() {
     let matches = command!() // requires `cargo` feature
