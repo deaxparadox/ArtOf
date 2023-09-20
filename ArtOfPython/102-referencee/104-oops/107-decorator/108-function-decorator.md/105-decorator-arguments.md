@@ -107,7 +107,7 @@ We can also test interactively to see how the decorator's configuration argument
 ```py
 >>> from timerdeco2 import timer
 >>> @timer(trace=False)
- # No tracing, collect total time
+    # No tracing, collect total time
 ... def listcomp(N):
 ...
  return [x * 2 for x in range(N)]

@@ -16,18 +16,18 @@ class Person:
 
     name = property(getName, setName, delName, "name property docs")
 
-class Lower(Person):
-    pass 
+# class Lower(Person):
+#     pass 
 
 def main():
-    bob = Lower("Bob Smith")
+    bob = Person("Bob Smith")
     print(bob.name)
     bob.name = "Robert Smith"
     print(bob.name)
     del bob.name 
 
     print("-"*20)
-    sue = Lower("Sue Jones")
+    sue = Person("Sue Jones")
     print(sue.name)
     print(Person.name.__doc__)
 
