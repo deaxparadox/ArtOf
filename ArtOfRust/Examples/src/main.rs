@@ -7,10 +7,12 @@ mod error;
 mod slice;
 mod structure;
 mod rust;
-
+mod question;
 
 
 fn main() {
+    question::mean_mod_median::main();
+    
     let matches = command!() // requires `cargo` feature
         .arg(arg!([name] "Optional name to operate on"))
         .arg(

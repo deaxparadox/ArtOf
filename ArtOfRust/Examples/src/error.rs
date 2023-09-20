@@ -65,10 +65,10 @@ pub mod propagating_error_shortcut {
     };
 
     pub fn main() -> Result<String, io::Error>{
-        let mut usernmae = String::new();
+        let mut username = String::new();
 
         File::open("hello.txt")?.read_to_string(&mut username)?;
     
-        Ok(usernmae)
+        Ok(username)
     }
 }
