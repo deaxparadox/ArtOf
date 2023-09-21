@@ -60,3 +60,9 @@ would produce erroneous output (which is machine dependent).
 In effect, a union creates a storage location that can be used by any one of its members at a time. When a different member is assigned a new value, the new value supersedes the previous member's value.
 
 Union may be used in all place where a structure is allowed. The notation for accessing a union member which is nested inside a structure remains the same as for the nested structures.
+
+Unions may be intialized when the variable is declared. But unlike structures, it can be initialized only with a value of same type as the first union member.
+
+```c
+union item abc = {100};
+```
