@@ -104,4 +104,52 @@ Reading a file into a string is a fairly common operation, so the standard libra
 
 ### Where The "?" Operator can be used
 
-The `?` operator can only 
+The `?` operator can only be used in functions whose return type is compatible with the value the `?` is used on. This is because `?` operator is defined to perform en early return of value of the function, in the same mamaber as the match expression, the `match` was using a `Result` value, and the early return arm returned an `Err(e)` value. The return tpe of the function has to be a `Result` so that it's compatible with this `return`.
+
+**We’re only allowed to use the `?` operator in a function that returns Result, Option, or another type that implements FromResidual.**
+
+To fix the error, you have two choices.
+
+1. One choice is to change thereturn type of your function to be compatible with the value you're using the `?` operator on as long as you have no restrictions preventing that. 
+2. The other techniques is to use a mtch or one of the `Result<T, E>` method to handlethe `Result<T, E>` in whatevery way is appropriate.
+
+----------
+
+`?` can be used with `Option<T>` values as well. The behavior of the `?` operator when called on an `Option<T>` is similar to its behavior when called on `Result<T, E>`: if the value is `None`, the `None` will be returned early from the function at that point. If the value is `Some`, the value inside the `Some` is the resulting value of the expression and the function continues.
+
+An example of a function that finds the last character of the first line:
+
+```rs
+fn last_char_of_first_line(text: &str) -> Option<char> {
+    text.lines().next()?.chars().last()
+}
+```
+
+This function returns `Option<char>` because it’s possible that there is a character there, but it’s also possible that there isn’t. This code takes the `text` string slice argument and calls the `lines` method on it, which returns an iterator over the lines in the string. Because this function wants to examine the first line, it calls `next` on the iterator to get the first value from the iterator. If text is the empty string, this call to next will return `None`, in which case we use `?` to stop and return `None` from `last_char_of_first_line`. If `text` is not the empty string, `next` will return a `Some` value containing a string slice of the first line in text.
+
+----------
+
+Note that you can use the `?` operator on a `Result` in a function that returns `Result`, and you can use the `?` operator on an `Option` in a function that returns `Option`, but you can’t mix and match. The `?` operator won’t automatically convert a `Result` to an `Option` or vice versa; in those cases, you can use methods like the `ok` method on `Result` or the `ok_or` method on `Option` to do the conversion explicitly.
+
+----------
+
+The `main` function is special because it’s the entry and exit point of executable programs, and there are restrictions on what its return type can be for the programs to behave as expected. All the generally return `()`.
+
+Luckily, main can also return a `Result<(), E>`. In bellow example we’ve changed the return type of main to be `Result<(), Box<dyn Error>>` and added a return value `Ok(())` to the end. This code will now compile:
+
+```rs
+use std::error::Error;
+use std::fs::File;
+
+fn main() -> Result<(), Box<dyn Error>> {
+    let greeting_file = File::open("hello.txt")?;
+
+    Ok(())
+}
+```
+
+The `Box<dyn Error>` type is a *trait object*. For now, you can read `Box<dyn Error>` to mean “any kind of error.” Using `?` on a `Result` value in a main function with the error type `Box<dyn Error>` is allowed, because it allows any `Err` value to be returned early. Even though the body of this main function will only ever return errors of type `std::io::Error`, by specifying `Box<dyn Error>`, this signature will continue to be correct even if more code that returns other errors is added to the body of main.
+
+When a `main` function returns a `Result<(), E>`, the executable will exit with a value of `0` if main returns `Ok(())` and will exit with a nonzero value if main returns an `Err` value.
+
+The `main` function may return any types that implement the `std::process::Termination` `trait`, which contains a function report that returns an `ExitCode`. 
