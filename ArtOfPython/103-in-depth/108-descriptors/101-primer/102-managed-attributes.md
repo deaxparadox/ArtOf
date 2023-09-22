@@ -56,14 +56,14 @@ In [34]: dave.age
 INFO:root:Accessing 'age' giving 40
 Out[34]: 40
 
-In [35]: mary.birthday()
+In [35]: mary.birthday()                            # Updates are logged as well
 INFO:root:Accessing 'age' giving 30
 INFO:root:Updating 'age' to 31
 
-In [36]: dave.name
+In [36]: dave.name                                  # Regular attribute lookup isn't logged
 Out[36]: 'David D'
 
-In [37]: dave.age
+In [37]: dave.age                                   # Only the managed attribute is good
 INFO:root:Accessing 'age' giving 40
 Out[37]: 40
 
@@ -73,3 +73,5 @@ INFO:root:Updating 'age' to 41
 
 In [39]: 
 ```
+
+One major issue with this example is that the private name _age is hardwired in the LoggedAgeAccess class. That means that each instance can only have one logged attribute and that its name is unchangeable.
