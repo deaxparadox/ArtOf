@@ -19,8 +19,21 @@ int main()
     strcpy(ptr->branch, "Computer Science And Engineering");
     ptr->batch = 2019;
  
+    int length = strlen(ptr->name), i;
+    printf("%d\n", length);
+    for (i=0; i<length; i++) {
+        printf("%c ", ptr->name[i]);
+    }
+    // i = 0;
+    // while (ptr->name != "\0") {
+    //     printf("%c", ptr->name[i]);
+    //     i = i + 1;
+    // }
+    printf("\n\n\n");
+
+
     printf("Roll Number: %d\n", (*ptr).roll_no);
-    printf("Name: %s\n", (*ptr).name);
+    printf("Name: %s\n", ptr->name);
     printf("Branch: %s\n", (*ptr).branch);
     printf("Batch: %d\n", (*ptr).batch);
  
