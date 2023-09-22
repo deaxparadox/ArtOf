@@ -1,1 +1,1 @@
-# Descriptors How to
+# Descriptors How to Guide
