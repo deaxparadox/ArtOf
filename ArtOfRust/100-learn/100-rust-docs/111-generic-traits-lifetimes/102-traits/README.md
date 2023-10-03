@@ -11,3 +11,4 @@ A *trait* defines functionality a particular type has and can share with other t
 
 
 ## Defining a Trait
+
