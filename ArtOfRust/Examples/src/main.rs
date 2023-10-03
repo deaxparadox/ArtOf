@@ -8,6 +8,7 @@ mod slice;
 mod structure;
 mod rust;
 mod question;
+mod generics;
 
 
 fn main() {
@@ -77,4 +78,6 @@ fn main() {
             }
         };
     };
+
+    generics::generic_method_definition_1::main();
 }
