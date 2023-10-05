@@ -59,3 +59,28 @@ impl Summary for Tweet {
     }
 }
 ```
+
+After we define `summarize_author`, we can call `summarize` on instances of the `Tweet` struct, and the default implementation of `summarize` will the call the definition of `summarize_author` that we've provided. Because we've implemented `summarize_author`, the `Summary` trait has given us the behavior of the `summarize` method without requiring us to write any more code.
+
+```rs
+    let tweet = Tweet {
+        username: String::from("horse_ebooks"),
+        content: String::from(
+            "of course, as you probably already know, people",
+        ),
+        reply: false,
+        retweet: false,
+    };
+
+    println!("1 new tweet: {}", tweet.summarize());
+
+```
+
+This code prints `1 new tweet: (Read more from @horse_ebooks...)`.
+
+----------
+
+Note that it isn’t possible to call the default implementation from an overriding implementation of that same method.
+
+
+[<<< home](README.md) ... [Traits as Parameters >>>](102-traits-as-parameters.md)
