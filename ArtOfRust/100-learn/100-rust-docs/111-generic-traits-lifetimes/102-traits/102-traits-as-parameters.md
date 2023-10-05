@@ -83,3 +83,6 @@ pub fn notify<T: Summary + Display>(item: &T) {}
 ```
 
 With the two trait bounds specified, the body of `notify` can call `summarize` and use `{}` to format `item`.
+
+### Clearer Trait Bounds with where Clauses.
+
