@@ -86,3 +86,22 @@ With the two trait bounds specified, the body of `notify` can call `summarize` a
 
 ### Clearer Trait Bounds with where Clauses.
 
+Using to many trait bound has it own downsides. Each generic has its own trait bounds, so function with multiple generic type parameters can contain lots of trait bound information between the function's name and it's paramter list, making the function signature hard to read. For this reason, Rust has alternate syntax for specifying trait bounds inside a **`where`** clause after the function signature. So instead of writing this:
+
+```rs
+fn some_function<T: Display + Clone, U: Clone + Debug>(t: &T, u: &U) -> i32 {
+```
+
+we can use a where clause, like this:
+
+```rs
+fn some_function<T, U>(t: &T, u: &U) -> i32
+where
+    T: Display + Clone,
+    U: Clone + Debug,
+{
+```
+
+This function’s signature is less cluttered: the function name, parameter list, and return type are close together, similar to a function without lots of trait bounds.
+
+[<<< default-implemetations](101-default-implemetations.md) ... [returning-types-that-implement-traits >>>](103-returning-types-that-implement-traits.md)
