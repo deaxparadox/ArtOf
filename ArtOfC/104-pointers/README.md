@@ -53,8 +53,7 @@ Pointers represent a powerful tool to create and enhance applications. On the do
 - Referencing heap allocated memory after it has been released.
 - Dereferencing a pointer before memory has been allocated to it.
 
-
-## Declaring Pointers:
+## Declaring Pointers
 
 In the following example, an integer and a pointer to an integer are declared:
 
@@ -76,3 +75,66 @@ int*pi;
 ```
 
 The asterisk declares the variable as a pointer.
+
+There are several points to remember:
+
+- The content of pi should eventually be assigned the address of an integer variable.
+- These variables have not been initialized and thus contain garbage.
+- There is nothing inherent to a pointer's implementation that suggests what type of data it is referencing or whether its contents are valid.
+- However, the pointer type has been specified and the compiler will frequently complain when the pointer is not used correctly.
+
+### Read a Declaration
+
+```c
+const int *pci;
+```
+
+Reading the declaration backward allows us to progressively understand the declaration:
+
+![pointer 102](asset/102-pointers.png)
+
+
+### Address of Operator
+
+The address operator, **&**, will return its operand's address. We can initialize the *pi* pointer with the address of num using this operator as follows:
+
+```c
+int num;
+int *pi = &num;
+```
+
+Pointers and integers are not the same. They may both be stored using the same number of bytes on most machines, but they are not the same. However, it is possible to cast an integer to a pointer to an integer:
+
+```c
+pi = (int *)num;
+```
+
+This will not generate a syntax error. When executed, though the program may terminate abnormally when the program attempts to deference the value at address zero.
+
+### Displaying Pointer Values
+
+The variable's address can be determined by printing it out as follows:
+
+
+```c
+    int num = 0;
+    int *pi = &num;
+    printf("Address of num: %d Value: %d\n", &num, num);
+    printf("Address of pi: %d Value: %d\n", &pi, pi);
+```
+
+When executed , we get:
+
+
+```bash
+Address of num: 558996404 Value: 0
+Address of pi: 558996404 Value: 0
+```
+
+The **printf** function has a couple of other field specifiers useful when displaying pointer values:
+
+- **%x**: Displays the value as a hexadecimal number;
+- **%o**: Displays the value as an octal number;
+- **%p**: Displays the value in an implementation-specific manner, typically as a hexadecimal number.
+
+... [virtual-memory-and-pointers >>> ](101-virtual-memory-and-pointers.md)
