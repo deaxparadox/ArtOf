@@ -37,4 +37,4 @@ To summarize, an image name may consist of 3 parts plus a tag.
 - But may be as short as ubuntu, then the *registry* will default to *Docker hub*, *organisation* to *library* and *tag* to *latest*. 
 - The organisation may also be a user, but calling it an organisation may be more clear.
 
-[<<< Images](105-images.md) ... [Building Images >>>](107.building-images.md)
+[<<< Images](105-images.md) ... [Building Images >>>](107-building-images.md)
