@@ -1,9 +1,0 @@
-{
-  "imports": {
-    "std/": "https://deno.land/std@0.187.0/",
-    "p/": "./"
-  },
-  "tasks": {
-    "dev": "deno run --watch main.ts"
-  }
-}
