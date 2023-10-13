@@ -1,9 +1,0 @@
-version: '3.8'
-
-services:
-  app:
-    build: ./bin
-    # command: ["./structure_working"]
-    container_name: executable_test
-    
-  
