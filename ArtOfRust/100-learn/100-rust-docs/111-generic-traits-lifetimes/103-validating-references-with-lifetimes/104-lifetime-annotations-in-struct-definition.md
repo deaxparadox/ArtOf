@@ -20,3 +20,4 @@ This struct has the single field `part` that holds a string slice, which is a re
 
 The `main` function here creates an instance of the `ImportantExcerpt` struct that holds a reference to the first sentence of the `String` owned by the variable novel. The data in `novel` exists before the `ImportantExcerpt` instance is created. In addition, `novel` doesn’t go out of scope until after the `ImportantExcerpt` goes out of scope, so the reference in the `ImportantExcerpt` instance is valid.
 
+[<<< Thinking in terms of lifetimes](103-thinking-in-terms-of-lifetimes.md) ... [Lifetime elision >>>](105-lifetime-elision.md)
