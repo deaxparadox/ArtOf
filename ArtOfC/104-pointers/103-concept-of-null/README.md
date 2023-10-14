@@ -28,3 +28,43 @@ The ASCII NUL is defined as a byte containing all zeros. However, this is not th
 A null pointer and an uninitialized pointer are different. An uninitialized pointer can contain nay value, whereas a pointer containing NULL does not reference any location in memory.
 
 ----------
+
+
+We can assign a zero to a pointer, but we cannot assign any other integer value.
+
+```c
+    int *ptr=0;
+    char * ptr = 0;
+```
+
+A pointer can be used as the sole operand of a logical expression. For example, we can test to see whether the pointer is set to NULL using the following sequence:
+
+```c
+if (pi) {
+    // Not NULL
+} else {
+    // Is NULL
+}
+```
+
+----------
+
+Either of the two following expressions are valid but are redundant. It may be clearer, but explicit comparison to NULL is not necessary.
+
+----------
+
+The pi has been assigned a NULL value in this context, then it will be interpreted as the binary zero. Since this represents false in C, the else clause will be executed if pi contains NULL.
+
+```c
+if (pi == NULL) ...
+if (pi != NULL) ...
+```
+
+----------
+
+A null pointer should never be dereferenced becuase it does not contain a valid address. When executed it will result in the program termination.
+
+----------
+
+
+[To NULL or not to NULL >>>](101-null-or-not-null.md)

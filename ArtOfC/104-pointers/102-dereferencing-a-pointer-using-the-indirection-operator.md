@@ -22,4 +22,4 @@ The following will assign 200 to the integer pointed to by **pi**. Since it is p
 printf("%d\n", num);            # Displays 200
 ```
 
-[<<< Virutal Memory and Pointer](101-virtual-memory-and-pointers.md) .. [The Concept of NULL >>>](103-concept-of-null.md)
+[<<< Virutal Memory and Pointer](101-virtual-memory-and-pointers.md) .. [The Concept of NULL >>>](103-concept-of-null/README.md)
