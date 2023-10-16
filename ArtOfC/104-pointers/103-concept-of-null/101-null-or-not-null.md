@@ -12,3 +12,5 @@ int *pi = 0;
 pi = &num;
 *pi = 0;
 ```
+
+[<<< README](README.md) ... [Pointer to Void](102-pointer-to-void.md)
