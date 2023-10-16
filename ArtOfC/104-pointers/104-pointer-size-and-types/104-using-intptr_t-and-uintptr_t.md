@@ -25,3 +25,9 @@ We cannot use **uintptr_t** with other data types without casting:
 char c;
 uintptr_t *pc = (uintptr_t*)&c;
 ```
+
+----------
+
+Avoid casting a pointer to an integer. In the case of 64-bit pointers, information will be lost if the integer was only four bytes
+
+----------
