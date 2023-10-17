@@ -8,6 +8,8 @@ In the restaurant industry, some parts of a restaurant are referred to as *front
 
 To structure our crate in this way, we can organize its functions into nested modules. Create a new library named `restaurant` by running `cargo new restaurant --lib`; then enter the code into *src/lib.rs* to define some modules and function signatures. Here’s the front of house section:
 
+Filename: src/lib.rs
+
 ```rs
 mod front_of_house {
     mod hosting {
