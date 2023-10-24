@@ -12,3 +12,4 @@ Topics:
 - [Packages and Crates](101-packages-and-crates/README.md)
 - [Defining Modules to Control Scope and Privacy](102-defining-modules-to-control-scopes-and-privacy/README.md)
 - [Paths for Referring to an Item in the Module Tree](103-paths-for-referring-item-in-module-tree/README.md)
+- [Bringing Paths into Scope with the user Keyword](104-bringing-paths-into-scope-with-the-user-keyword/README.md)
