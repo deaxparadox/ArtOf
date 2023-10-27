@@ -1,4 +1,0 @@
-    Finished test [unoptimized + debuginfo] target(s) in 0.06s
-     Running unittests src/main.rs (target/debug/deps/echor-ad102f27e9bfaea7)
-     Running tests/cli.rs (target/debug/deps/cli-96d249279005d0a7)
-error: test failed, to rerun pass `--test cli`
