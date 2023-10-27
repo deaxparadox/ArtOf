@@ -14,9 +14,9 @@ int main() {
     int *p1 = vector + 1;
     int *p2 = vector + 2;
 
-    printf("p2>p0:\t%d\n", p2>p0);
-    printf("p2<p0:\t%d\n", p2>p0);
-    printf("p0>p1:\t%d\n", p0>p1);
+    printf("p2>p0:\t%d\n", p2>p0);  // p2>p0: 1
+    printf("p2<p0:\t%d\n", p2<p0);  // p2<p0: 0
+    printf("p0>p1:\t%d\n", p0>p1);  // p0>p1: 0
 }
 ```
 
