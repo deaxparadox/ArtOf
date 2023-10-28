@@ -153,3 +153,4 @@ Instead of `ok`, the line `test tests::another` shows `FAILED`. Two new sections
 
 The summary line displays at the end: overall, our test result is `FAILED`. We had one test pass and one test fail.
 
+[Checking Results with the assert! Macro >>>](101-checking-reuslts-with-the-assert-macro.md)
