@@ -96,3 +96,5 @@ class singleton:
 ```
 
 To make this decorator a fully general-purpose tool, choose one, store it in an import module file, and indent the self-test code under a **__name__**
+
+[<<<](README.md) ... [Tracing Object Interfaces >>>](102-tracing-object-interfaces.md)
