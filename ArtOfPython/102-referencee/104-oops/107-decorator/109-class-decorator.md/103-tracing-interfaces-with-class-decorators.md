@@ -77,3 +77,5 @@ Trace: pay
 ```
 
 Notice how there is one **Wrapper** class with state retention per decoration, generate by the nested *class* statement in the Tracer function, and how each instance get its own fetches counter by virtue of generating a new **Wrapper** instance.
+
+[<<< Tracing Object Interfaces](102-tracing-object-interfaces.md) ... [Applying class decorators to built-in types >>>](104-applying-class-decorators-to-builtin-types.md)
