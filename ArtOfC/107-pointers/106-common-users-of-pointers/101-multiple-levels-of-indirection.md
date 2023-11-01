@@ -44,3 +44,6 @@ The two arrays are intialized and one of their elements is displayed as shown. I
 ```
 
 Memory is allocated for this example as shown: Figure 1-10.
+
+
+[<<< README](README.md) ... [Contants and Pointers >>>](102-constants-and-pointers/README.md)
