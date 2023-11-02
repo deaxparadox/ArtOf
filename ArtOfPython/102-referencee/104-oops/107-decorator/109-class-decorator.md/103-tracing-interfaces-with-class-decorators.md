@@ -3,6 +3,15 @@
 
 Class decorators provide an alternative convenient way to code this `__getattr__` technique to wrap an entire inteface.
 
+```py
+class Wrapper:
+    def __init__(self, object):
+        self.wrapped = object           # Save object
+    def __getattr__(self, attrname):
+        print("Trace:", attrname)               # Trace fetch
+        return getattr(self.wrapped, attrname)  # Delegate fetch
+```
+
 The following **Wrapper** class can be coded as a class decorator that triggers wrapped instance creation, instead of passing a premade instance into the wrapper's constructor (also augmented here to support keyword augments with ****kwargs** and to count the number of accesses made to illustrate changeable state):
 
 ```py
