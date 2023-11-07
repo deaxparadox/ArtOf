@@ -43,3 +43,15 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 ``` 
+
+We pass `4` as the argument to `assert_eq!`, which is equal to the result of calling `add_two(2)`. The line for this test is `test tests::it_adds_two ... ok`, and the `ok` text indicates that our test passed!
+
+----------
+
+Let's introduce a but into our code to ses what `assert_eq!` looks like when it fails. Chagn the implementation of the `add_two` function to instead add `3`:
+
+```rs
+pub fn add_two(a: i32) -> i32 {
+    a + 3
+}
+```
