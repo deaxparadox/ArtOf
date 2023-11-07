@@ -48,10 +48,41 @@ We pass `4` as the argument to `assert_eq!`, which is equal to the result of cal
 
 ----------
 
-Let's introduce a but into our code to ses what `assert_eq!` looks like when it fails. Chagn the implementation of the `add_two` function to instead add `3`:
+Let's introduce a but into our code to ses what `assert_eq!` looks like when it fails. Change the implementation of the `add_two` function to instead add `3`:
 
 ```rs
 pub fn add_two(a: i32) -> i32 {
     a + 3
 }
 ```
+
+Run the tests again:
+
+```bash
+$ cargo test
+   Compiling adder v0.1.0 (file:///projects/adder)
+    Finished test [unoptimized + debuginfo] target(s) in 0.61s
+     Running unittests src/lib.rs (target/debug/deps/adder-92948b65e88960b4)
+
+running 1 test
+test tests::it_adds_two ... FAILED
+
+failures:
+
+---- tests::it_adds_two stdout ----
+thread 'tests::it_adds_two' panicked at 'assertion failed: `(left == right)`
+  left: `4`,
+ right: `5`', src/lib.rs:11:9
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    tests::it_adds_two
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--lib`
+
+```
+
+[Adding Custom Failure Messages >>>](103-adding-custome-failure-messages.md)
