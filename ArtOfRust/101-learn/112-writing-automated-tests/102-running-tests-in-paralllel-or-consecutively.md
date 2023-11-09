@@ -1,0 +1,3 @@
+# Running Tests in Parallel or Consecutively
+
+When you run multiple tests, by default they run in parallel using threads, meaning they finish running faster and you get feadback quicker. Because the tests are running at the same time, you must make sure your tests don't depend on each other or on any shared state, including a shared environment, such as  the current working directory or environment variables.
