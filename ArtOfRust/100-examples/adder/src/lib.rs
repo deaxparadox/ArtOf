@@ -1,6 +1,7 @@
 mod custom_failure_messages;
 mod guess;
 mod result_test;
+mod prints_and_returns;
 
 #[derive(Debug)]
 struct Rectangle {
@@ -79,4 +80,10 @@ mod tests {
         assert_eq!(4, add_two(2));
     }
 
+
+    #[test]
+    #[ignore]
+    fn expensive_test() {
+        //
+    }
 }

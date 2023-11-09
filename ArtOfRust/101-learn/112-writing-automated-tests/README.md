@@ -16,3 +16,6 @@ Some command line options go to `cargo test`, and some go to the resulting test 
 Running `cargo test --help` displays the options you can use with `cargo test`, and running `cargo test -- --help` displays the options you can use after the separator.
 
 - [Running Tests in Parallel or Consecutively](102-running-tests-in-paralllel-or-consecutively.md)
+- [Showing Function Output](103-showing-function-output.md)
+- [Running a Subset of Tests by Name](104-running-subset-of-tests-by-name.md)
+- [Ignoring Some Tests Unless Specifically Requested](105-ignoring-some-tests-unless-specifically-requested.md)
