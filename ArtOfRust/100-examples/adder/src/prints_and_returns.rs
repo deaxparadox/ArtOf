@@ -14,6 +14,7 @@ mod test_print_and_return {
     }
 
     #[test]
+    #[ignore = "intentional fail to or return"]
     fn this_test_will_fail() {
         let value = prints_and_returns_10(8);
         assert_eq!(5, value);

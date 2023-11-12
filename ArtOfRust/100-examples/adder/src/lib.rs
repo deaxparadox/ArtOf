@@ -20,7 +20,7 @@ pub fn add(left: usize, right: usize) -> usize {
 }
 
 pub fn add_two(a: i32) -> i32 {
-    a + 3
+    a + 2
 }
 
 #[cfg(test)]
@@ -41,6 +41,7 @@ mod tests {
         }
     }
     #[test]
+    #[ignore = "use on intentional panic :("]
     fn another() {
         panic!("Make this test fail");
     }

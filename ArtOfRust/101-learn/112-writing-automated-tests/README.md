@@ -19,3 +19,15 @@ Running `cargo test --help` displays the options you can use with `cargo test`, 
 - [Showing Function Output](103-showing-function-output.md)
 - [Running a Subset of Tests by Name](104-running-subset-of-tests-by-name.md)
 - [Ignoring Some Tests Unless Specifically Requested](105-ignoring-some-tests-unless-specifically-requested.md)
+
+
+### Test Organization
+
+The Rust community thinks about tests in terms of two main categories: unit tests and integration tests. 
+
+- Unit tests are small and more focused, testing one module in isolation at a time, and can test private interfaces. 
+- Integration tests are entirely external to your library and use your code in the same way any other external code would, using only the public interface and potentially exercising multiple modules per test.
+
+- [Unit Tests](106-unit-test.md)
+- [Integration Tests](107-integration-tests.md)
+- [Submodulse in Integration Tests](108-submodules-in-integration-tests.md)
