@@ -55,4 +55,4 @@ Sue
 
 ----------
 
-The function-base **Tracer** version does work for mutlple instances, because each instance construction call make a new **Wrapper** instance, instead of overwritting the state of a single shared **Tracer** instance; the original non decorator version handles multiple instnaces correctly for the same reason.
+The function-based **Tracer** version does work for mutlple instances, because each instance construction call make a new **Wrapper** instance, instead of overwritting the state of a single shared **Tracer** instance; the original non decorator version handles multiple instnaces correctly for the same reason.
