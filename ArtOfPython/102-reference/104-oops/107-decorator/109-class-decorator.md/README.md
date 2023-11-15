@@ -7,3 +7,4 @@ Class decorators are applied to classes--they may be used either to manage *clas
 - [Tracing interfaces with class decorators](103-tracing-interfaces-with-class-decorators.md)
 - [Applying class decorators to built-in types](104-applying-class-decorators-to-builtin-types.md)
 - [Retaining Multiple Instances](105-retaining-multiple-instances.md)
+- [Decorators Versus Manager Functions](106-decorators-versus-manager-functions.md)
