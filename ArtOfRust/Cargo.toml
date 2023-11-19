@@ -1,4 +1,6 @@
 [workspace]
 members = [
-    "100-examples/adder"
+    "100-examples/adder",
+    "Projects/minigrep",
 ]
+resolver = "2"
