@@ -44,3 +44,22 @@ We can include an `else` with an `if let`.
         count += 1;
     }
 ```
+
+or 
+
+```rs
+enum Numbers {
+    One(i32),
+    Two(i32),
+    Three(i32)
+}
+fn main() {
+    let one = Numbers::One(1);
+
+    if let Numbers::One(value) = one {
+        println!("Everything Ok, {}", value);
+    }
+    exit(0);
+}
+
+```
