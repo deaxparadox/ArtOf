@@ -1,4 +1,9 @@
 use std::process::exit;
+use std::rc::Rc;
+
+mod closures;
+mod lifetimes;
+mod reference_counters;
 
 #[derive(Debug)]
 enum List<T> {
@@ -12,15 +17,27 @@ enum Numbers {
     Two(i32),
     Three(i32)
 }
-fn main() {
-    // let list: List<i32> = List::Cons(1, Box::new(List::Cons(2, Box::new(List::Nil))));
-    // println!("{list:?}");
-
+fn number() {
     let one = Numbers::One(1);
 
     if let Numbers::One(value) = one {
         println!("Everything Ok, {}", value);
     }
+}
 
-    exit(0);
+fn display_name(a0: Rc<&str>) {
+    println!("Name is: {a0}");
+}
+
+
+
+fn generate_and_return_string<'a, 'b>() -> &'a &'b str {
+    return &"Nitish";
+}
+
+fn main() {
+
+
+closures::run();
+
 }
