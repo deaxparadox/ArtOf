@@ -37,3 +37,8 @@ Two important points in time here:
 
 - When `s` comes into *scope*, it valid.
 - It remains valid until it goes *out of* scope.
+
+- [String type](101-string-type.md)
+- [Memory Allocation](102-memory-allocation.md)
+- [Ownership functions](103-ownership-functions.md)
+- [Return values scope](104-return-values-scope.md)

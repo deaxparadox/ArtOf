@@ -97,3 +97,10 @@ fn build_user(email: String, username: String) -> User {
     }
 }
 ```
+
+- [Creating instances](101-creating-instances.md)
+- [Tuple struct](102-tuple-struct.md)
+- [Unit like structure](103-unit-like-structure.md)
+- [Ownership struct data](104-ownership-struct-data.md)
+- [Adding functinality](105-adding-usefull-functionality.md)
+- [Example](105-example.md)

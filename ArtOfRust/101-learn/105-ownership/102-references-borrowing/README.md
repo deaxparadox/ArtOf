@@ -51,3 +51,6 @@ The scope in which the variable `s` is valid is the same as any function paramet
 We call the action of creating a reference *borrowing*.
 
 
+- [Mutable references](101-mutable-references.md)
+- [Dangling references](102-dangling-reference.md)
+- [Rules](103-rules.md)

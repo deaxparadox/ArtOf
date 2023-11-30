@@ -76,3 +76,6 @@ fn main() {
     // we could meaningfully use the value 5 with. word is now totally invalid!
 }
 ```
+
+- [String slices](101-string-slices.md)
+- [Others](102-others.md)
