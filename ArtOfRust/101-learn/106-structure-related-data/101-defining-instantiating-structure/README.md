@@ -102,5 +102,5 @@ fn build_user(email: String, username: String) -> User {
 - [Tuple struct](102-tuple-struct.md)
 - [Unit like structure](103-unit-like-structure.md)
 - [Ownership struct data](104-ownership-struct-data.md)
-- [Adding functinality](105-adding-usefull-functionality.md)
+- [Adding functionality](105-adding-usefull-functionality.md)
 - [Example](105-example.md)
