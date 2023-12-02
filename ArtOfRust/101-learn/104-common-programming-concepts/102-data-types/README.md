@@ -1,6 +1,13 @@
 # Data Types
 
-- [Data Types](105-Data-Types.md)
+Every value in Rust is of a certain data type, which tells Rust what kind of data is being specified so it knows how to work with that data.
+
+- Rust is a statically typed language, which means that it must know the types of all variables at compile time.
+
+```rust
+let guess: u32 = "42".parse().expect("Not a number!");
+```
+
 - [Scaler Types](106-Scalar-Types.md)
 - [Floating Point Types](106.1-Floating-Point-Types.md)
 - [Numeric Operations](106.2-Numeric-Operations.md)

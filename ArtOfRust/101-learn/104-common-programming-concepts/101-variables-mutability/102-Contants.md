@@ -13,3 +13,5 @@ const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 
 - The compiler is able to evaluate a limited set of operations at compile time, which lets us choose to write out this value in a way that’s easier to understand and verify, rather than setting this constant to the value 10,800. 
 - Constants are valid for the entire time a program runs, within the scope in which they were declared.
+
+[<<< Variable and Mutability](101-Variables-and-Mutability.md) | [Shadowing >>>](103-Shadowing.md)

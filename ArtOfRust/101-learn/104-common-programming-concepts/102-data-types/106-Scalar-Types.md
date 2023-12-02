@@ -38,3 +38,6 @@ An *integer* is a number without a fractional component.
 <tr><td>Byte (<code class="hljs">u8</code> only)</td><td><code class="hljs">b'A'</code></td></tr>
 </tbody></table>
 </div>
+
+
+[<<< Data Types](README.md) | [Floating Point Types](106.1-Floating-Point-Types.md)

@@ -38,6 +38,9 @@ fn generate_and_return_string<'a, 'b>() -> &'a &'b str {
 fn main() {
 
 
-closures::run();
+    // closures::run();
+
+    let s1 = "Hello world";
+    println!("{}", s1.len());
 
 }
