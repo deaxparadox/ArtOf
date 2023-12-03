@@ -41,4 +41,4 @@ lst a = [3; 5];
 - This is the same as writing let a = [3, 3, 3, 3, 3]; but in a more concise way.
 
 
-[<<< Tuple Types](107.1-Tuple-Type.md) | [Accessing Array Elements >>>](107.3-Accessing-Array-Elements.md)
+[<<< Tuple Types](101-Tuple-Type.md) | [Accessing Array Elements >>>](103-Accessing-Array-Elements.md)

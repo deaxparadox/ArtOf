@@ -51,4 +51,4 @@ fn main() {
 - This value and its corresponding type are both written () and represent an empty value or an empty return type.
 - Expressions implicitly return the unit value if they don’t return any other value.
 
-[<<< Compound Types](107-CompoundTypes.md) | [Array Types >>>](107.2-Array-Type.md)
+[<<< Compound Types](README.md) | [Array Types >>>](102-Array-Type.md)

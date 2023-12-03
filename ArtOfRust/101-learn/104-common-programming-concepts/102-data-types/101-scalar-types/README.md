@@ -40,4 +40,4 @@ An *integer* is a number without a fractional component.
 </div>
 
 
-[<<< Data Types](README.md) | [Floating Point Types](106.1-Floating-Point-Types.md)
+[<<< Data Types](README.md) | [Floating Point Types](101-Floating-Point-Types.md)

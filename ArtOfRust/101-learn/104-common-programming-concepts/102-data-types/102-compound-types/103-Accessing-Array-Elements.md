@@ -16,4 +16,4 @@ fn main() {
 - In this example, the variable named first will get the value 1 because that is the value at index [0] in the array. 
 - The variable named second will get the value 2 from index [1] in the array.
 
-[<<< Array Types](107.2-Array-Type.md) 
+[<<< Array Types](102-Array-Type.md) 

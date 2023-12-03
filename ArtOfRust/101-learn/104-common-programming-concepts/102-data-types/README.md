@@ -8,7 +8,7 @@ Every value in Rust is of a certain data type, which tells Rust what kind of dat
 let guess: u32 = "42".parse().expect("Not a number!");
 ```
 
-- [Scaler Types](106-Scalar-Types.md)
+- [Scaler Types](101-scalar-types/README.md)
 - [Floating Point Types](106.1-Floating-Point-Types.md)
 - [Numeric Operations](106.2-Numeric-Operations.md)
 - [Boolean](106.3-Boolean-Type.md)

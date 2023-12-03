@@ -24,3 +24,8 @@ The value of number is: 5
 
 - the values that have the potential to be results from each arm of the `if` must be the same type.
 - `let number = if condition { 5 } else { 6 };` value in both `if` and `else` block must be of same type.
+
+
+
+
+[<<< Handling multiple conditions](102-handling-multiple-condition.md) | [Loops >>>](104-loops.md)

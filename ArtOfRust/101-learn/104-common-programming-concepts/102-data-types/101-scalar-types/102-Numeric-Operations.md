@@ -22,4 +22,4 @@ fn main() {
 }
 ```
 
-[<<< Floating Ponit Types](106.1-Floating-Point-Types.md) | [Boolean Types >>>](106.3-Boolean-Type.md)
+[<<< Floating Ponit Types](101-Floating-Point-Types.md) | [Boolean Types >>>](103-Boolean-Type.md)

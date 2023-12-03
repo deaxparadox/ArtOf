@@ -13,4 +13,4 @@ fn main() {
 }
 ```
 
-[<<< Boolean Types](106.3-Boolean-Type.md) | [Compound Types >>>](107-CompoundTypes.md)
+[<<< Boolean Types](103-Boolean-Type.md)

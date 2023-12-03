@@ -5,4 +5,4 @@
 - Rust has two primitive compound types: *tuples* and *arrays*.
 
 
-[<<< Character Types](106.4-Character-Types.md) | [Tuple Type >>>](107.1-Tuple-Type.md)
+[<<< Character Types](106.4-Character-Types.md) | [Tuple Type >>>](101-Tuple-Type.md)

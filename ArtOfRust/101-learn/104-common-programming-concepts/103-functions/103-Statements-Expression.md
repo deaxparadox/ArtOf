@@ -41,4 +41,4 @@ fn main() {
 - Expressions do not include ending semicolons. 
 - If you add a semicolo nto the end of an expression, you turn it into a statement, and it will then not return a value.  
 
-[<<< Parameters](102-Parameters.md) ... [Return values >>>](104-functions-return-values.md)
+[<<< Parameters](102-Parameters.md) | [Return values >>>](104-functions-return-values.md)

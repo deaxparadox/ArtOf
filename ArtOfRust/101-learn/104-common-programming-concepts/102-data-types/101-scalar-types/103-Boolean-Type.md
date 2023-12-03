@@ -10,4 +10,4 @@ fn main() {
 }
 ```
 
-[<<< Numeric Types](106.2-Numeric-Operations.md) | [Character Types >>>](106.4-Character-Types.md)
+[<<< Numeric Types](102-Numeric-Operations.md) | [Character Types >>>](104-Character-Types.md)

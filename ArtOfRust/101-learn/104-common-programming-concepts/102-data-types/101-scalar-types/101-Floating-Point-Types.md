@@ -13,4 +13,4 @@ fn main() {
 }
 ```
 
-[<<< Scalar Types](106-Scalar-Types.md) | [Numeric Operations >>>](106.2-Numeric-Operations.md)
+[<<< Scalar Types](README.md) | [Numeric Operations >>>](102-Numeric-Operations.md)

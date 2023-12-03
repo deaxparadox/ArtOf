@@ -38,4 +38,4 @@ fn main() {
 }
 ```
 
-[<<< Functions returns values](104-functions-return-values.md) ... [Control Flow >>>](106-control-flow.md)
+[<<< Common Programming Concepts](README.md)

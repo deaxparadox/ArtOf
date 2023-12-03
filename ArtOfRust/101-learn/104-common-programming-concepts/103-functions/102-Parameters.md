@@ -47,4 +47,4 @@ $ cargo run
 The measurement is: 5h
 ```
 
-[<<< README](README.md) ... [Statements and Expressions](103-Statements-Expression.md)
+[<<< README](README.md) | [Statements and Expressions](103-Statements-Expression.md)
