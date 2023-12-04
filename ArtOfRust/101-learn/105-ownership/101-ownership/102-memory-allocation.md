@@ -15,9 +15,11 @@ With the `String` type, in order to support a mutable, growable piece of text, w
 
 That first part is done by us: when we call `String::from`, its implementation requests the memory it needs. This is pretty much universal in programming languages.
 
-The second part is different: in Rust memory is automatically returned once the variable that owns it goes out of scope.
+Howevery, the second part is different: in Rust memory is automatically returned once the variable that owns it goes out of scope.
 
-```ts
+Here’s a version of our scope example from Listing 4-1 using a `String` instead of a string literal:
+
+```rs
 {
     let s = String::from("hello"); // s is valid from this point forward
 
@@ -28,17 +30,21 @@ The second part is different: in Rust memory is automatically returned once the 
 ```
 
 - There is a natural point at which we can return the memory our `String` needs to the allocator: when `s` goes out of scope.
-- When a variable goes out of scope, Rust calls a special function for us.
-- This function is called `drop`, and it's where the author of `String` can put the code to return the memory.
+- When a variable goes out of scope, Rust calls a special function for us. This function is called `drop`, and it's where the author of `String` can put the code to return the memory.
 - Rust calls `drop` automatically at the closing curly bracket.
 
 
 ## Variables and Data Interacting with Move
 
+Multiple variables can interact witht the same data in different ways in Rust. Let's look at an example using an integer.
+
 ```rs
 let x = 5;
 let y = x;
 ```
+
+###### Listing 4-2: Assigning the integer value of variable x to y
+
 
 - We can probably guess what this is doing: “bind the value `5` to `x`; then make a copy of the value in `x` and bind it to `y`.” 
 - We now have two variables, `x` and `y`, and both equal `5`. 

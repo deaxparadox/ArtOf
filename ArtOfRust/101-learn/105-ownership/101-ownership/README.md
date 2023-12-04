@@ -18,7 +18,9 @@ Let's take a look at the ownership rules.
 
 ## Variables Scope.
 
-A scope is the range within a program for which an item is valid.
+A scope is the range within a program for which an item is valid. 
+
+Take the following variable:
 
 ```rust
 let s = "hello";
@@ -36,6 +38,10 @@ let s = "hello";
     }                      // this scope is now over, and s is no longer valid
 ```
 
+###### Listing 4-1: A variable and the scope in which it is valid
+
+
+
 Two important points in time here:
 
 - When `s` comes into *scope*, it valid.
@@ -45,3 +51,5 @@ Two important points in time here:
 - [Memory Allocation](102-memory-allocation.md)
 - [Ownership functions](103-ownership-functions.md)
 - [Return values scope](104-return-values-scope.md)
+
+[<<< Understanding Ownership](../README.md) | [String type >>>](101-string-type.md)

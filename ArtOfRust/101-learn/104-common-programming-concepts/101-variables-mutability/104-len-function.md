@@ -25,4 +25,4 @@ output:
     spaces = spaces.len();
 ```
 
-[<<< Shadowing](103-Shadowing.md)
+[<<< Shadowing](103-Shadowing.md) | [Data Types](../102-data-types/README.md)

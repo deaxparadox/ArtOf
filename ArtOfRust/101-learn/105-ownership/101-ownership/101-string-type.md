@@ -21,3 +21,5 @@ s.push_str(", world!"); // push_str() appends a literal to a String
 println!("{}", s); // This will print `hello, world!`
 
 ```
+
+[<<< Ownership](README.md) | [Memory Allocation >>>](102-memory-allocation.md)

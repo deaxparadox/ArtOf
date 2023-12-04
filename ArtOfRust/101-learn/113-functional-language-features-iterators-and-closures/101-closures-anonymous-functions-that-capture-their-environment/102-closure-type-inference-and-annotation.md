@@ -74,3 +74,7 @@ error: could not compile `closure-example` due to previous error
 ```
 
 The first time we call `example_closure` with the `String` value, the compiler infers the type of `x` and the return type of the closure to be `String`. Those types are then locked into the closure in `example_closure`, and we get a type error when we next try to use a different type with the same closure
+
+----------
+
+[Capture The Environment with Closures](101-capturing-the-environment-with-closures.md) | [Capturing References or Moving Ownership](103-capturing-refrences-or-moving-ownership.md)

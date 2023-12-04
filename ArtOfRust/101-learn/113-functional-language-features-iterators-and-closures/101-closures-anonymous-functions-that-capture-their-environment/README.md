@@ -18,3 +18,6 @@ syntax for create closures
 - [Capture The Environment with Closures](101-capturing-the-environment-with-closures.md)
 - [Closure Type Inference and Annotation](102-closure-type-inference-and-annotation.md)
 - [Capturing References or Moving Ownership](103-capturing-refrences-or-moving-ownership.md)
+- [Moving captured values out of closures and the fn traits](104-moving-captured-values-out-of-closures-and-the-fn-traits.md)
+
+[<<< Functional language features](../README.md) | [Capture The Environment with Closures](101-capturing-the-environment-with-closures.md)

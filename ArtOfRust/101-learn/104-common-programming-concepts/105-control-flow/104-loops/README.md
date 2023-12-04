@@ -11,4 +11,4 @@ Rust has three kinds of loops: `loop`, `while` and `for`.
 - [Conditional loops with while](104-conitional-loops-with-while.md)
 - [Looping through a collection with for](105-looping-through-a-collection-with-for.md)
 
-[<<< Control Flow](../README.md)
+[<<< Control Flow](../README.md) | [Repeating Code with loop >>>](101-repeating-code-with-loop.md)

@@ -27,6 +27,6 @@ Hello, world!
 Another function.
 ```
 
-[<<< Functions](README.md)[Parameters >>>](102-Parameters.md)
+[<<< Functions](README.md) | [Parameters >>>](102-Parameters.md)
 
 

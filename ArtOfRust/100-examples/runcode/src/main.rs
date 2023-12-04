@@ -1,5 +1,5 @@
-use std::process::Output;
 use std::process::exit;
+use std::process::Output;
 use std::rc::Rc;
 use std::thread;
 use std::time;
@@ -14,11 +14,10 @@ enum List<T> {
     Nil,
 }
 
-
 enum Numbers {
     One(i32),
     Two(i32),
-    Three(i32)
+    Three(i32),
 }
 fn number() {
     let one = Numbers::One(1);
@@ -32,23 +31,20 @@ fn display_name(a0: Rc<&str>) {
     println!("Name is: {a0}");
 }
 
-
-
 fn generate_and_return_string<'a, 'b>() -> &'a &'b str {
     return &"Nitish";
 }
 
-
 fn return_from_loop() -> String {
     let mut counter = 0;
-    
+
     'stop_anywhere: loop {
         counter += 1;
 
         if counter == 10 {
             break 'stop_anywhere;
         }
-    };
+    }
     let result = counter;
     return format!("The result is {}", result);
 }
@@ -81,11 +77,10 @@ fn nested_loop_label_2() {
         if count > 10 {
             break 'outer;
         }
-        
+
         if count % 2 == 0 {
             println!("Outer loop: {}", count);
         }
-        
 
         'inner: loop {
             if count % 3 == 0 {
@@ -98,16 +93,28 @@ fn nested_loop_label_2() {
     }
 }
 
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
 fn main() {
+    let mut list = [
+        Rectangle {
+            width: 10,
+            height: 1,
+        },
+        Rectangle {
+            width: 3,
+            height: 5,
+        },
+        Rectangle {
+            width: 7,
+            height: 12,
+        },
+    ];
 
-    let mut number = 3;
-
-    while number != 0 {
-        println!("{number}!");
-
-        number -= 1;
-    }
-
-    println!("LIFTOFF!!!");
-
+    list.sort_by_key(|r| r.width);
+    println!("{:#?}", list);
 }

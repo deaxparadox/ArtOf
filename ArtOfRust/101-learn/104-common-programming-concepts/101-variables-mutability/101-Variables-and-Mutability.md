@@ -47,4 +47,4 @@ fn main() {
 }
 ```
 
-[<<<Topics ](README.md) | [Contants >>>](102-Contants.md)
+[<<<Variables ](README.md) | [Contants Variables>>>](102-Contants.md)

@@ -49,4 +49,4 @@ Unknown number!
 - As you can we pass an input an to the program it convert the input in `i32`, after that it compare value using `if-else` and `else-if` expression.
 
 
-[<<< if expression](101-if-expressions.md) | [Control Flow](README.md) | [using if in let statement >>>](103-using-if-in-let-statement.md)
+[<<< if expression](101-if-expressions.md) | [using if in let statement >>>](103-using-if-in-let-statement.md)

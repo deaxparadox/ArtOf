@@ -72,4 +72,4 @@ fn main() {
 
 
 
-[<<< control flow](README.md) ... [handling multiple condition](102-handling-multiple-condition.md)
+[<<< control flow](README.md) | [handling multiple condition](102-handling-multiple-condition.md)

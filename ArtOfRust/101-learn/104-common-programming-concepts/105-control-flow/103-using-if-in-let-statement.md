@@ -28,4 +28,4 @@ The value of number is: 5
 
 
 
-[<<< Handling multiple conditions](102-handling-multiple-condition.md) | [Loops >>>](104-loops.md)
+[<<< Handling multiple conditions](102-handling-multiple-condition.md) | [Loops >>>](104-loops/README.md)

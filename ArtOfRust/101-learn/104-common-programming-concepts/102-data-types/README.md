@@ -17,3 +17,7 @@ let guess: u32 = "42".parse().expect("Not a number!");
 - [Tuple Type](107.1-Tuple-Type.md)
 - [Array Type](107.2-Array-Type.md)
 - [Accessing Array Element](107.3-Accessing-Array-Elements.md)
+
+
+----------
+[<<< Common Programming Concepts](../README.md) | [Scaler Types](101-scalar-types/README.md)

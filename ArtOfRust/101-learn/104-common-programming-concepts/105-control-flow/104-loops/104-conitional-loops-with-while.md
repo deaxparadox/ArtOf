@@ -32,4 +32,4 @@ This construct eliminates a lot of nesting that would be necessary if you used `
 LIFTOFF!!!
 ```
 
-[Loops label disambiguate between multiple loops](103-loops-label-disambiguate-between-multiple-loops.md) | [Looping through a collection with for](104-looping-through-a-collection-with-for.md)
+[Loops label disambiguate between multiple loops](103-loops-label-disambiguate-between-multiple-loops.md) | [Looping through a collection with for](105-looping-through-a-collection-with-for.md)

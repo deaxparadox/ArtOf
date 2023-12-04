@@ -86,3 +86,7 @@ One interesting aspect here is that we’ve passed a closure that calls `self.mo
 - The standard library didn’t need to know anything about the `Inventory` or `ShirtColor` types we defined, or the logic we want to use in this scenario. 
 - The closure captures an immutable reference to the `self` `Inventory instance and passes it with the code we specify to the `unwrap_or_else` method. 
 - Functions, on the other hand, are not able to capture their environment in this way.
+
+----------
+
+[<<< Cloures Anonymous function](README.md) | - [Closure Type Inference and Annotation](102-closure-type-inference-and-annotation.md)
