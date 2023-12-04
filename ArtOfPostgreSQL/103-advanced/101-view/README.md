@@ -10,3 +10,4 @@ Note that regular views do not store any data except the materialized views. In 
 
 - [Managing PostgreSQL views](101-managing-views.md): introduce you to the concept of the view and show you how to creating, modifying, and removing views from the database.
 - [Drop View](102-drop-views.md): drop one or more views from the database.
+- [Creating Updatable Views](103-creating-updatable-views.md): How to create updatable views in PostgreSQL
