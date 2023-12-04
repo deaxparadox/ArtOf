@@ -1,17 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+void print_number(int);
+void gen(int, void (*f)(int));
+
 int main() {
-    int arr[5];
-    arr[0] = 1;
-    arr[1] = 1;
-    arr[2] = 1;
-
-    int i = 0;
-    while (i < 5) {
-        printf("%d\n", arr[i]);
-        i++;
-    }
-
+    gen(10, print_number);
     exit(0);
+}
+
+void gen(int range, void (*f)(int a)) {
+    int i =0;
+    for (;i<range; i++) {
+        f(i);
+    }
+}
+
+void print_number(int a) {
+    printf("%d\n", a);
 }

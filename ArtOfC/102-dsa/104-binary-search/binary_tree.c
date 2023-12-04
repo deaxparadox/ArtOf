@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+//
+// Node 
 typedef struct _Node {
     int value;
     int visited;
