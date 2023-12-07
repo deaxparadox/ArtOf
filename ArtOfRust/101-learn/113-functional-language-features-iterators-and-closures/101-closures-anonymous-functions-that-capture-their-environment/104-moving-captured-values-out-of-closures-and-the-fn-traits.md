@@ -185,4 +185,4 @@ fn main() {
 The `Fn` traits are important when defining or using functions or types that make use of closures. In the next section, we’ll discuss iterators. Many iterator methods take closure arguments, so keep these closure details in mind as we continue!
 
 
-[<<< Capturing references or moving ownership](103-capturing-refrences-or-moving-ownership.md) | [Processing a Series of Items with Iterators >>>](../102-processing-a-series-of-items-with-iterators/README.md)
+[<<< Capturing references or moving ownership](103-capturing-refrences-or-moving-ownership.md) | [Functional Language Features >>>](../README.md)
