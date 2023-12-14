@@ -1,5 +1,18 @@
 # The Iterator Trait and the next Method
 
+
+
+- [Home](../../README.md)
+    - [Functional Language features](../README.md)
+        - [Closures](../101-closures-anonymous-functions-that-capture-their-environment/README.md)
+        - [Processing a series of Items](../102-processing-a-series-of-items-with-iterators/README.md)
+
+----------
+
+
+[<<< Processing a series of items with iterators](README.md) | [Methods that Consumes the iterator >>>](102-methods-that-consumes-the-iterator.md)
+
+
 All iterators implements a trait named `Iterator` that is defined in the standard library. The definition of the trait looks like thid:
 
 ```rs

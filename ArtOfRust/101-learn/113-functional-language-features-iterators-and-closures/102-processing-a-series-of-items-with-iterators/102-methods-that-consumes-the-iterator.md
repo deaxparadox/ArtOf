@@ -1,5 +1,14 @@
 # Methods that Consumes the Iterator
 
+- [Home](../../README.md)
+    - [Functional Language features](../README.md)
+        - [Closures](../101-closures-anonymous-functions-that-capture-their-environment/README.md)
+        - [Processing a series of Items](../102-processing-a-series-of-items-with-iterators/README.md)
+
+----------
+
+[<<< The Iterator trait and the next method](101-the-iterator-trait-and-the-next-method.md) | [Methods-that-produce-other-iterators >>>](103-methods-that-produce-other-iterators.md)
+
 Methods that call `next` are called *consuming adaptors*, becuase calling them uses up the iterator.
 
 One example is the `sum` method, which takes ownership of the iterator and iteratres through the items by repeatedly calling `next`, thus consuming the iterator. As it iterates through, it adds each item to a running total and returns the total when iteration is complete. Listing 13-13 has a test illustrating a use of the `sum` method:
