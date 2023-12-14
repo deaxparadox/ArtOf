@@ -23,3 +23,5 @@ Filename: src/lib.rs
 ###### Listing 13-13: Calling the sum method to get the total of all items in the iterator
 
 We aren't allowed to use `v1_iter` after the call to `sum` because `sum` takes ownersip of the iterator we call it on.
+
+[<<< The Iterator trait and the next method](101-the-iterator-trait-and-the-next-method.md) | [Methods-that-produce-other-iterators >>>](103-methods-that-produce-other-iterators.md)
