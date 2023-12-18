@@ -1,5 +1,16 @@
 # Processing a Series of Items with Iterators
 
+
+- [Home](../../README.md)
+    - [Functional lanuage Features](../README.md)
+        - [Closuers](../101-closures-anonymous-functions-that-capture-their-environment/README.md)
+        - [Processing a Series of items](README.md)
+
+----------
+
+[<<< Functional Language features](../README.md) | [The Iterator Trait and the next Method](101-the-iterator-trait-and-the-next-method.md)
+
+
 The iterator pattern allows you to perform some task on a sequence of items in turn. An iterator is responsible for the logic of iterating over each item and determining when the sequence has finished. 
 
 In Rust, iterators are *lazy*, meaning they have no effect until you call methods that consume the iterator to use it up.
