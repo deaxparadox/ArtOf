@@ -1,5 +1,9 @@
 # Creating PostgreSQL Updatable Views
 
+- [<<< Drop Views](102-drop-views.md) | [Materialized Views >>>](104-materialized-view.md)
+
+----------
+
 
 A PostgreSQL view is updatable when it meets the following conditions:
 
@@ -77,3 +81,7 @@ WHERE
 ```
 
 The entry has been deleted from the `city` table through the `use_cities` view.
+
+----------
+
+[<<< Drop Views](102-drop-views.md) | [Materialized Views >>>](104-materialized-view.md)
