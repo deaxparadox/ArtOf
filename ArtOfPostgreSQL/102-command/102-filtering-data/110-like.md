@@ -1,6 +1,6 @@
 # PostgreSQL Like
 
-- [NULL >>>](111-null.md)
+- [NULL >>>](111-is-null.md)
 ----------
 
 
@@ -211,4 +211,4 @@ PostgreSQL also provides some operators that act like the `LIKE`, `NOT LIKE`, `I
 
 ![102 between](../asset/102-between.png)
 
-[NULL >>>](111-null.md)
+[NULL >>>](111-is-null.md)
