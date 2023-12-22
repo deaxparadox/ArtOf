@@ -1,7 +1,7 @@
 # Creating Updatable Views Using the WITH CHECK OPTION Clause
 
 
-- [<<< Materialized Views](104-materialized-view.md) |
+- [<<< Materialized Views](104-materialized-view.md) | [Recursive View >>>](106-recursive-view.md)
 
 ----------
 
@@ -86,3 +86,96 @@ This is because the UPDATE statement causes the row that is being update not vis
 
 
 ### The scope of check with LOCAL and CASCADED
+
+First, create a view that returns all cities with the name starting with the letter A.
+
+```sql
+CREATE VIEW city_a AS SELECT
+	city_id,
+	city,
+	country_id
+FROM
+	city
+WHERE
+	city LIKE 'A%';
+```
+
+This `city_a` view does not have the `WITH CHECK OPTION` clause.
+
+
+Second, create another view that returns the cities whose name start with the letter A and locate in the `United States`. This `city_a_usa` view is based on the `city_a` view.
+
+
+```sql
+CREATE
+OR REPLACE VIEW city_a_usa AS SELECT
+	city_id,
+	city,
+	country_id
+FROM
+	city_a
+WHERE
+	country_id = 103 
+WITH CASCADED CHECK OPTION;
+```
+
+```
+ city_id |          city           | country_id 
+---------+-------------------------+------------
+      11 | Akron                   |        103
+      33 | Arlington               |        103
+      41 | Augusta-Richmond County |        103
+      42 | Aurora                  |        103
+```
+
+The `city_a_usa` view has the `WITH CASCADED CHECK OPTION` clause. Notice the `CASCADED` option.
+
+The following statement inserts a row into the `city` table through the `city_a_usa` table.
+
+```sql
+INSERT INTO city_a_usa (city, country_id)
+VALUES
+	('Houston', 103);
+```
+
+PostgreSQL rejected the insert and issued the following error:
+
+```
+ERROR: new row violates check option for view "city_a"
+SQL state: 44000
+Detail: Failing row contains (605, Houston, 103, 2016-07-02 09:51:40.916855).
+```
+
+The error message indicates that the view-defining condition for the `city_a` view was voilated even though the city_a view does not have the `WITH CHECK OPTION` clause.
+
+This is because when we used the `WITH CASCADED CHECK OPTION` for the `city_a_usa` view, PostgreSQL checked the view-defining condition of the `city_a_usa` view and also all the underlying views, in this case, it is the city_a view.
+
+To check the view-defining condition of the view that you insert or update, you use the `WITH LOCAL CHECK OPTION` as follows:
+
+
+```sql
+CREATE OR REPLACE VIEW city_a_usa AS SELECT
+	city_id,
+	city,
+	country_id
+FROM
+	city_a
+WHERE
+	country_id = 103 
+WITH LOCAL CHECK OPTION;
+```
+
+Let's insert a new row into city table via the city_a_use view again:
+
+```sql
+INSERT INTO city_a_usa (city, country_id)
+VALUES
+	('Houston', 103);
+```
+
+It succeeded this time because the newrow satisfies the view-defining condition of the `city_a_usa` view. PostgreSQL did not check the view-defining conditions of the base views.
+
+
+----------
+
+- [<<< Materialized Views](104-materialized-view.md) | [Recursive View >>>](106-recursive-view.md)
