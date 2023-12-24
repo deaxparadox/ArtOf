@@ -45,3 +45,5 @@ However, it increments **name** by one and each loop iteration. At the end, name
 Memory leaks can also occur when the program should release memory but does not. A hidden memory leaks occur when an object is kept in the heap even thoughthe object is no longer needed.
 
 Memory leaks can also occur when freeing structures created using the **struct** keyword. If the structure contains pointer to dynamically allocated memroy, then these pointers may need to be freed before the structure is freed.
+
+- [<<< Dynamic Memory Allocations](101-dynamic-memory-allocation.md) | [Dyanmic Memory Allocations Functions >>>](103-dynamic-memory-allocation-functions.md)
