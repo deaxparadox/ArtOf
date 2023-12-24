@@ -3,5 +3,6 @@ members = [
     "100-examples/adder",
     "100-examples/runcode",
     "Projects/minigrep",
+    "questions",
 ]
 resolver = "2"

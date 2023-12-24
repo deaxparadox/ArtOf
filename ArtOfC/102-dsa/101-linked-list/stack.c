@@ -32,10 +32,10 @@ int main() {
     sni_insert(16, head);
     last = sni_insert(312, head);
 
-    for (int i=20; i<=10; i++) {
+    for (int i=20; i<=10000000; i++) {
         printf("adding: %d\n", i);
         last = sni_insert(i, last);
-        sleep(1);
+        // sleep(1);
     }
 
     sni * temp = head;
@@ -55,6 +55,7 @@ int main() {
 void sigint_handler(int signal) {
     printf("Captured SIGINT Signal\n");
     freeall(head);
+    exit(1);
 }
 
 sni *sni_create(int x) {
@@ -86,6 +87,8 @@ void freeall(sni *h) {
 
         // make temp next node to NULL
         t->next = NULL;
+
+        printf("Freed: %d\n", t->data);
 
         // free temp
         free(t);
