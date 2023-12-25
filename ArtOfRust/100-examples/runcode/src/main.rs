@@ -5,6 +5,7 @@ mod lifetimes;
 mod reference_counters;
 mod code;
 mod iterators;
+mod cons_list;
 
 fn main() {
     iterators::method_that_produce_other_iterators();
