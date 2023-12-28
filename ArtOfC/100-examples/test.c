@@ -1,22 +1,48 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-
-void print_number(int);
-void gen(int, void (*f)(int));
-
-int main() {
-    gen(10, print_number);
-    exit(0);
-}
-
-void gen(int range, void (*f)(int a)) {
-    int i =0;
-    for (;i<range; i++) {
-        f(i);
+#define arraysize 3
+char **return_string_array()
+{
+    static char *arr[arraysize] = {"asf", "asdf", "wrq"};
+    for (int i = 0; i < arraysize; i++)
+    {
+        printf("%s\n", arr[i]);
     }
+    // return "returned from the array fucntion";
+    return arr;
 }
 
-void print_number(int a) {
-    printf("%d\n", a);
+int *return_integer_array()
+{
+    static int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    return arr;
+}
+
+int main()
+{
+    char *lcp = (char *)calloc(10, sizeof(char));
+    char a[] = "asdfsdf";
+    char *c = "asdf";
+    char sn = 'a';
+    strcat(lcp, a);
+    printf("%s\n", lcp);
+
+    char **arr = return_string_array();
+    for (int i = 0; i < arraysize; i++)
+    {
+        printf("%s ", arr[i]);
+    }
+
+    // int *arr = return_integer_array();
+    // for (int i=0; i<10; i++) {
+    //     printf("%d ", arr[i]);
+    // }
+    printf("\n");
+
+    int nums[3] = {1, 2, 3};
+
+    free(lcp);
+    exit(0);
 }
