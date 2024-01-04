@@ -14,13 +14,13 @@ fn search() -> Result<(), ()> {
     let mut target = 4;
 
 
-    LinearSearch::find_target(&numbers, target)?;
+    BinarySearch::find_target(&numbers, target)?;
     println!("{:?}", numbers);
     Ok(())
 }
 
-struct LinearSearch;
-impl LinearSearch {
+struct BinarySearch;
+impl BinarySearch {
     pub fn find_target(arr: &Vec<i32>, target: i32) -> Result<(), ()>{
         for i in arr.into_iter() {
             println!("{target}\t{i}");
