@@ -85,3 +85,6 @@ Like all class attributes, properties are *inheritences* by both instances and l
 ![property](asset/101-property.png)
 
 the output is the same--the **Person** subclass inherits the **name** property from **Super**, and the **bob** instance gets it from **Person**.
+
+
+[text](https://)
